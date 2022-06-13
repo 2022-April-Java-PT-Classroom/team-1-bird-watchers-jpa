@@ -8,6 +8,7 @@ font-family: 'Times New Roman', Times, serif;
 font-size: 16px;
 color: black;
 }
+
 header {
     align-items: center;
     background-color: #333333;
@@ -47,21 +48,46 @@ header nav ul li a {
     justify-content: center;
     padding: 30px;
 }
-main{
-    background-image: url("https://th.bing.com/th/id/OIP.pLDfwu4uU7FvnmQDp_e-xAHaE8?pid=ImgDet&rs=1");
+body{
+    background-image: url("https://images.pexels.com/photos/3584309/pexels-photo-3584309.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     background-size: cover;
 }
-.about__bird_watching{
+.About__birdwatching_wrapper{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    max-height:fit-content;
+
+    
+}
+.watching{
+    max-width:auto;
+    max-height:700px;
+    margin-top:20px;
+    margin-left: 30px;
+    border-radius: 10px;
+}
+.bird__watching_info{
+    max-height:700px;
     margin-top: 20px;
     margin-bottom: 40px;
     margin-left: 40px;
     margin-right: 40px;
+    border: solid white 10px;
+    background-color: rgb(241, 238, 233);
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 22px;
+}
+.about__bird_watching_title{
+    margin-bottom: 50px;
+
 }
 footer{
     background-color: #333333;
     color: white;
     display: flex;
     justify-content: flex-end;
-    padding: 50px;
+    padding: 1em;
     font-size: 150%;
 }
