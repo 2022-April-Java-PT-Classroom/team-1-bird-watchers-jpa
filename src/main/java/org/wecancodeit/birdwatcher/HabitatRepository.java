@@ -1,4 +1,4 @@
 package org.wecancodeit.birdwatcher;
 
-public class HabitatsRepository {
+public class HabitatRepository {
 }
