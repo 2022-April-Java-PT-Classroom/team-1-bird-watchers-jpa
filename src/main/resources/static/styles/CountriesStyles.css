@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+    
+    html{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    
+    color: black;
+    }
+    
+    header {
+    align-items: center;
+    background-color: #333333;
+    color: #ddd;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 20px 0;
+    }
+    
+    header h1 {
+    padding-left: 20px;
+    }
+    
+    header nav {
+    padding-right: 20px;
+    
+    }
+    
+    header nav ul {
+    display: flex;
+    }
+    
+    header nav ul li {
+    padding-right: 10px;
+    text-decoration: none;
+    list-style-type: none;
+    }
+    
+    header nav ul li:last-child {
+    padding-right: 0;
+    }
+    
+    header nav ul li a {
+    border-radius: 3px;
+    color: #ddd;
+    padding: 3px;
+    text-decoration: none;
+    }
+    .contactUs {
+    color: #675364;
+    display: flex;
+    font-size: 150%;
+    justify-content: center;
+    padding: 30px;
+    }
+
+    footer{
+        background-color: #333333;
+        color: white;
+        display: flex;
+        padding: 1em 0;
+        font-size: 150%;
+        margin-bottom: 1em;
+        margin-top: 2em;
+
+        }
+    #country{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        grid-column-gap: 1em;
+        margin-left: 50em;
+        margin-right: 15em;
+    }
+    #country article {
+        padding: 2.5em;
+    }
+    .country_images{
+        margin: 20px;
+    }
+        
