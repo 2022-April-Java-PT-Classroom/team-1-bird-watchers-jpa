@@ -6,20 +6,26 @@
     <link rel="stylesheet" href="styles/HabitatStyles.css">
 </head>
 <body>
-<header>
-        <!-- Add Thymeleaf For Habitat Name -->
-        <h1 class="habitat__name">Habitat Name In Chosen Country</h1>
-        <nav class="nav">
-            <ul class="nav__list">
-                <li class="nav__list_item">
-                    <a href="#habitat__info">Habitat Info</a>
+    <header>
+        <div class="wrapper">
+        <h1>Jac's Twitchers Birdwatching Excursion</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="home.html">Home</a>
                 </li>
-                <li class="nav__list_item">
-                    <a href="#birds__list">Birds List</a>
+                <li>
+                    <a href="aboutUs.html">About Us</a>
+                </li>
+                <li>
+                    <a href="#contactUs">Contact us</a>
+                </li>
+                <li>
+                    <a href="#">Scavenger Hunt</a>
                 </li>
             </ul>
         </nav>
-</header>
+    </header>
 <article class="mission__habitat_wrapper">
     <figure class="image__wrapper">
         <!-- Add Thymeleaf For Chosen Habitat Image -->
@@ -57,11 +63,16 @@
     
     </ul>
 </section>
-<figure class="home" >
-    <a class="home__button" href="home.html">Back</a>
-</figure>
 <footer class="footer">
-    <small class="copyright">&copy Team 1 @ WCCI</small>
+    <section id="contactUs">
+        <h2 class="contact__us_header">Contact Us</h2>
+        <ul>
+            <li>Email: team1@jacenterprises.com</li>
+            <li>Contact Number: (555)-BIRDING (247-3464)</li>
+        </ul>
+    </section>
+    <small>&copy Team 1 @ WCCI</small>
+</footer>
 </footer>
 </body>
 </html>
