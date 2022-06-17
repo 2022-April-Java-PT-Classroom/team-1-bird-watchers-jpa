@@ -11,7 +11,8 @@ color: black;
 
 li{padding-right: 10px;
     text-decoration: none;
-    list-style-type: none;}
+    list-style-type: none;
+}
 
 .wrapper{
     display:flex;
