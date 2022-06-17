@@ -9,16 +9,41 @@
     color: black;
     }
     
-    header {
-        display: flex;
+    li{padding-right: 10px;
+        text-decoration: none;
+        list-style-type: none;}
+    
+    .wrapper{
+        display:flex;
         justify-content: space-between;
-        align-items: center;
+        margin-left:20px;
+        margin-right:20px;
+    }
+    
+    header {
         background-color: #333333;
         color: #ddd;
-        margin: 0 auto;
         padding: 20px 0;
-        margin-bottom:20px
     }
+    
+    header nav ul {
+        display: flex;
+    }
+    
+    header nav ul li {
+        padding-right: 10px;
+        text-decoration: none;
+        list-style-type: none;
+    }
+    
+    header nav ul li a {
+        border-radius: 3px;
+        color: #ddd;
+        padding: 3px;
+        text-decoration: none;
+        list-style-type:none;
+    }
+    
     .habitat__name{
         padding-left:30px;
     }
@@ -31,21 +56,7 @@
         list-style-type: none;
     }
 
-    
-    header nav ul li a {
-        border-radius: 3px;
-        color: #ddd;
-        padding: 35px;
-        text-decoration: none;
-    }
 
-    header nav ul li a:hover{
-        padding:10px;
-        border-radius: 60px;
-        border: #4739F0 5px solid;
-        background: #00c3ff;
-        transition: 2s;
-    }
     .contactUs {
         color: #675364;
         display: flex;
@@ -147,34 +158,13 @@
         margin-right:200px;
     }
 
-    .home{
-        margin-top:80px;
-        margin-bottom:80px;
-        width: fit-content;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .home__button{
-        padding:30px;
-        background-color: rgb(241, 238, 233);
-        border: solid white 10px;
-        border-radius: 10px;
-    }
-
-    .home__button:hover{
-        border: #4739F0 5px solid;
-        background: #00c3ff;
-        transition: 2s;
-    }
 
     footer{
         background-color: #333333;
         color: white;
         display: flex;
-        justify-content: flex-end;
-        padding: 20px;
-        font-size: 150%;
+        justify-content: space-between;
+        padding: 1em;
+        font-size:20px
     }
-    
     
