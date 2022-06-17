@@ -8,7 +8,23 @@
 </head>
 <body>
 <header>
-    <h1>Birdwatching In Our Country</h1>
+    <nav class="navbar">
+        <h1>Birdwatching In Our Country</h1>
+        <a href="/">Home</a>
+        <a href="#aboutusdevelopers">AboutUsDevTeam</a>
+        <div class="dropdown">
+            <button class="dropbtn">BirdWatching</button>
+            <div class="dropdown_content">
+                <a href="#">IntroToBirdWatching</a>
+                <a href="#">BirdWatchingInSouthAmerica</a>
+                <a href="#">CountriesToExplore</a>
+                <a href="#">RegionsInOurPackage</a>
+                <a href="#">HabitatsToExperience</a>
+                <a href="#">ScavengerHunt!</a>
+            </div>
+            <a href="#">ContactUs</a>
+        </div>
+    </nav>
 </header>
 <main>
     <section class="country">
@@ -28,9 +44,9 @@
             Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec. At varius vel pharetra vel turpis. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum. Imperdiet nulla malesuada pellentesque elit eget gravida cum sociis. Magna fermentum iaculis eu non diam. Ac tortor vitae purus faucibus ornare suspendisse sed nisi. In ornare quam viverra orci sagittis eu volutpat odio.
         </p>
     </article>
-        <h3 class="click__below"> Click below for information about the habitat in Peru</h3>
+        <h3 class="click__below">Click below for information about the habitat in Peru</h3>
         <ul>
-            <li>
+            <li class="link__container">
                 //include thymeleaf /th:each for Peru habitat
             </li>
         </ul>
@@ -55,7 +71,7 @@
     </article>
         <h3 class="click__below">Click below for information about the habitat in Ecuador</h3>
         <ul>
-            <li>
+            <li class="link__container">
                 //include thymeleaf /th:each for Ecuador habitat
             </li>
         </ul>
@@ -63,9 +79,7 @@
     </section>
 
 </main>
-<nav>
-    <a href="/">Home</a>
-</nav>
+
 
 </body>
 <footer>
