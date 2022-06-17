@@ -7,7 +7,6 @@
     html{
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
-    
     color: black;
     }
     
@@ -24,10 +23,20 @@
     header h1 {
     padding-left: 20px;
     }
+    section h2{
+        padding: 30px;
+        margin: 20px;
+        font-size: 40px;
+        background-color: rgb(241, 238, 233);
+        max-width: 250px;
+        max-height: auto;
+        border: solid white 10px;
+        border-radius: 10px;
+        text-align: left;
+    }
     
     header nav {
     padding-right: 20px;
-    
     }
     
     header nav ul {
@@ -50,6 +59,31 @@
     padding: 3px;
     text-decoration: none;
     }
+
+    body{
+    background-image: url("https://images.pexels.com/photos/3584309/pexels-photo-3584309.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    }
+
+
+    main section p {
+    max-width: 1100px;
+    max-height: auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+    border: solid white 10px;
+    background-color: rgb(241, 238, 233);
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 22px;
+    float: right;
+    }
+    .click__below{
+    background-color: rgb(241, 238, 233);
+    }
     .contactUs {
     color: #675364;
     display: flex;
@@ -59,27 +93,29 @@
     }
 
     footer{
-        background-color: #333333;
-        color: white;
-        display: flex;
-        padding: 1em 0;
-        font-size: 150%;
-        margin-bottom: 1em;
-        margin-top: 2em;
+    background-color: #333333;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    font-size: 150%;
 
-        }
-    #country{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: auto;
-        grid-column-gap: 1em;
-        margin-left: 50em;
-        margin-right: 15em;
     }
-    #country article {
-        padding: 2.5em;
+    .country{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
     }
     .country_images{
+        max-width: 1000px;
+        max-height: auto;
+        margin-top: 20px;
+        margin-left: 30px;
+        border-radius: 10px;
+        border: solid white 10px;
         margin: 20px;
+    }
+    .country__info{
+    margin-right: 10em;
     }
         
