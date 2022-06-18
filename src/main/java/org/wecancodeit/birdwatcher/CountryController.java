@@ -9,34 +9,20 @@ import javax.annotation.Resource;
 @Controller
 public class CountryController{
 
-    private final CountryStorage countryStorage;
-
-    public CountryController(CountryStorage countryStorage){
-        this.countryStorage = countryStorage;
-    }
-
     @Resource
     private CountryRepository countryRepo;
-    @Resource
-    private RegionRepository regionRepo;
 
     @RequestMapping({"/countries", "/", ""})
-    public String displayCountries(Model model, @PathVariable Long id){
-        model.addAttribute("countries", countryStorage.findAllCountries());
+    public String displayCountries(Model model){
+        model.addAttribute("countries", countryRepo.findAll());
         return "countriesView";
+        //This return is subject to change depending on html path
     }
-    @GetMapping("/countries/{countryLocation}")
-    public String displaySingleCountry(@PathVariable String countryLocation, Model model){
-        Country retrievedCountry = countryStorage.findCountryByLocation(countryLocation);
+    @GetMapping("/countries/{location}")
+    public String displaySingleCountry(@PathVariable String location, Model model){
+        Country retrievedCountry = countryRepo.findByCountryLocation(location);
         model.addAttribute("country", retrievedCountry);
-
         return "countryView";
-
+        //This return is subject to change depending on html path.
     }
-    @PostMapping("/add-country")
-    public String addCountry(@RequestParam String location){
-        countryStorage.store(new Country(location));
-        return "redirect:countries";
-    }
-
 }
