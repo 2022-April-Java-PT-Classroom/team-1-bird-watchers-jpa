@@ -16,14 +16,17 @@ public class Country {
     private String description;
     @OneToMany(mappedBy = "country")
     private Collection<Region> regions;
-    @ManyToMany(mappedBy = "birds")
+    //potential for deletion below
+    @ManyToMany(mappedBy = "habitats")
     private Collection<Habitat> Habitats;
-    @ManyToMany
+    //potential for deletion below
+    @ManyToMany(mappedBy = "birds")
     private Collection<Bird> Birds;
+    //potential for deletion above
 
     //Peru has Coast, Mountains, Jungles. Ecuador has Coast, Mountains, Jungles
 
-    public Country(){
+    public Country(String location){
 
     }
 
