@@ -14,6 +14,7 @@ public class Country {
     @GeneratedValue
     private Long id;
     private String location;
+    private String description;
     private String urlImage;
     @OneToMany(mappedBy = "country")
     @JsonIgnore
@@ -32,8 +33,10 @@ public class Country {
 
     }
 
-    public Country(String location, String urlImage) {
+    public Country(String location, String description, String urlImage) {
         this.location = location;
+        this.description = description;
+        this.urlImage = urlImage;
     }
 
     public Long getId() {
@@ -49,6 +52,10 @@ public class Country {
         return urlImage;
     }
 
+    public String getDescription(){
+        return description;
+    }
+
 
     public Collection<Bird> getBirds() {
         return birds;
@@ -59,4 +66,5 @@ public class Country {
     public String toString() {
         return "Country{" + "id=" + id + ", location='" + location + '\'' + '}';
     }
+
 }
