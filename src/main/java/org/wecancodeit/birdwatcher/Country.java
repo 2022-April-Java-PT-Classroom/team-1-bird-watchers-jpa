@@ -1,9 +1,6 @@
 package org.wecancodeit.birdwatcher;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -14,17 +11,24 @@ public class Country {
     @Id
     @GeneratedValue
     private Long id;
-    private String name;
+    private String location;
+    private String urlImage;
     private String description;
     @OneToMany(mappedBy = "country")
     private Collection<Region> regions;
+    @ManyToMany(mappedBy = "birds")
+    private Collection<Habitat> Habitats;
+    @ManyToMany
+    private Collection<Bird> Birds;
+
+    //Peru has Coast, Mountains, Jungles. Ecuador has Coast, Mountains, Jungles
 
     public Country(){
 
     }
 
-    public Country(String name, String description, Region...regions) {
-        this.name=name;
+    public Country(String location, String description, String urlImage, Region...regions) {
+        this.location = location;
         this.description=description;
         this.regions = new ArrayList<>(Arrays.asList(regions));
     }
@@ -33,12 +37,16 @@ public class Country {
         return id;
     }
 
-    public String getName() {
-        return name;
+    public String getLocation() {
+        return location;
     }
 
     public String getDescription() {
         return description;
+    }
+
+    public String getUrlImage(){
+        return urlImage;
     }
 
 
@@ -50,7 +58,7 @@ public class Country {
     @Override
     public String toString() {
         return "Country{" +
-                "Name='" + name + '\'' +
+                "Location='" + location + '\'' +
                 ", Description='" + description + '\'' +
                 '}';
     }
