@@ -1,9 +1,6 @@
 package org.wecancodeit.birdwatcher;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @Entity
 public class Bird {
@@ -14,24 +11,17 @@ public class Bird {
     private String name;
     private String imageUrl;
     private String description;
-    private String order;
     @ManyToOne
-    private String country;
-    private String region;
-    private String habitat;
+//    private Order order;
+    @ManyToMany
+    private Country country;
+    @ManyToOne
+    private Region region;
+    @ManyToOne
+    private Habitat habitat;
 
     public Bird() {
 
-    }
-
-    public Bird(String name, String imageUrl, String description, String order, String country, String region, String habitat) {
-        this.name=name;
-        this.imageUrl=imageUrl;
-        this.description=description;
-        this.order=order;
-        this.country=country;
-        this.region=region;
-        this.habitat=habitat;
     }
 
     public Long getId() {
@@ -50,20 +40,29 @@ public class Bird {
         return description;
     }
 
-    public String getOrder() {
-        return order;
-    }
+//    public String getOrder() {
+//        return order;
+//    }
 
-    public String getCountry() {
+    public Country getCountry() {
         return country;
     }
 
-    public String getRegion() {
+    public Region getRegion() {
         return region;
     }
 
-    public String getHabitat() {
+    public Habitat getHabitat() {
         return habitat;
+    }
+
+    public Bird(Long id, String name, String imageUrl, String description, Country country, Region region, Habitat habitat) {
+        this.id= id;
+        this.name=name;
+        this.imageUrl=imageUrl;
+        this.description=description;
+//        this.order=order;
+
     }
 
     @Override
@@ -71,7 +70,7 @@ public class Bird {
         return "Bird{" +
                 "Name='" + name + '\'' +
                 ", Description='" + description + '\'' +
-                ", Order='" + order + '\'' +
+//                ", Order='" + order + '\'' +
                 ", Country='" + country + '\'' +
                 ", Region='" + region + '\'' +
                 ", Habitat='" + habitat + '\'' +
