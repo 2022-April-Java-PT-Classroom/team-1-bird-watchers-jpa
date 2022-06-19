@@ -12,7 +12,7 @@ public class Bird {
     private String imageUrl;
     private String description;
     @ManyToOne
-//    private Order order;
+    private String order;
     @ManyToMany
     private Country country;
     @ManyToOne
@@ -40,9 +40,9 @@ public class Bird {
         return description;
     }
 
-//    public String getOrder() {
-//        return order;
-//    }
+    public String getOrder() {
+        return order;
+    }
 
     public Country getCountry() {
         return country;
@@ -56,12 +56,12 @@ public class Bird {
         return habitat;
     }
 
-    public Bird(Long id, String name, String imageUrl, String description, Country country, Region region, Habitat habitat) {
+    public Bird(Long id, String name, String imageUrl, String description, String order Country country, Region region, Habitat habitat) {
         this.id= id;
         this.name=name;
         this.imageUrl=imageUrl;
         this.description=description;
-//        this.order=order;
+        this.order=order;
 
     }
 
@@ -70,7 +70,7 @@ public class Bird {
         return "Bird{" +
                 "Name='" + name + '\'' +
                 ", Description='" + description + '\'' +
-//                ", Order='" + order + '\'' +
+                ", Order='" + order + '\'' +
                 ", Country='" + country + '\'' +
                 ", Region='" + region + '\'' +
                 ", Habitat='" + habitat + '\'' +
