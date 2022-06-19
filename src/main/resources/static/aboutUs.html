@@ -8,55 +8,110 @@
 </head>
 <body>
 <header>
-    <h1>JAC Bird Watching Excursion</h1>
-    <nav>
-        <ul>
-            <li>
-                <a href="#">Home</a>
-            </li>
-            <li>
-                <a href="#">About Us</a>
-            </li>
-            <li>
-                <a href="#contactus">Contact us</a>
-            </li>
-            <li>
-                <a href="#">Scavenger Hunt</a>
-            </li>
-        </ul>
+    <nav class="navbar">
+    <h1>JAC Enterprises</h1>
+        <a href="/">Home</a>
+        <a href="#aboutUs.html">Developers</a>
+        <div class="dropdown">
+            <button class="dropbtn">BirdWatching</button>
+            <div class="dropdown_content">
+                <a href="#">IntroToBirdWatching</a>
+                <a href="#">BirdWatchingInSouthAmerica</a>
+                <a href="#">CountriesToExplore</a>
+                <a href="#">RegionsInOurPackage</a>
+                <a href="#">HabitatsToExperience</a>
+                <a href="#">ScavengerHunt!</a>
+            </div>
+            <a href="#">ContactUs</a>
+        </div>
     </nav>
 </header>
 <main>
     <section class="about__us_info">
-        <h2>Meet The Team</h2>
-        <p class="about_us">
-            Hello, I Am Andera Fells.
-            I am from Columbus, OH. I'm a full time bird watching guide who also enjoys researching, listening to music,
-            and most importantly spending time with my family.
-            <br>
-            <br>Sam
-            <br>
-            <br> Gail
-            <br>
-            <br> Stephanie
-            <br>
-            <br>Zach
-            <br>
-            <br>Roger
-            <br>
+        <h2 style="text-align:center">Meet The Team</h2>
+        <div class="row">
+            <div class="column">
+                <div class="card">
+                    <img src="images\sade_bio_pic.jpg" alt="personal picture" class="about__us_image"
+                         alt="Andera" style="width:100%">
+                    <div class="container">
+        <b>Andera Fells</b>
+        <br>
+        Andera is currently located in Columbus, OH. Her love for learning, and taking on challenging task set her
+        on the path of coding. She is a full stack developer who loves to see projects come "alive". Andera is a
+        dedicated team player, but also works well on her own. Outside of development she enjoys researching
+        anything that catches her attention from music,dance, psychology etc.. Most importantly she loves spending
+        time with her family!
+        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <figure>
+            <img src="images\sam_bio_pic.jpg" alt="personal picture" class="about__us_image">
+        </figure>
+        <br> <b>Samuel Leiva</b>
+        <br>
+        <figure>
+            <img src="images\gail_bio_pic.jpg" alt="personal picture" class="about__us_image">
+        </figure>
+        <br> <b>Gail Cowley</b>
+        <br>
+        Gail is a Cleveland based web-developer. Her love of learning drives her to be on the cutting edge and
+        up to date with the latest strategies in coding. Whether she is flying solo or on a team she strives to do
+        her best to create work that is creative and engaging.
+        <br>
+        <figure>
+            <img src="images\steph_bio_pic.jpg" alt="personal picture" class="about__us_image">
+        </figure>
+        <br> <b>Stephanie Ingraham</b>
+        <br>
+        Junior Level Full-Stack Developer born and raised in Huntsville, AL.
+        As a wife and mother, Stephanie loves having experiences with her family to profound amazing memories. Her
+        hobbies include: hiking, gaming, and reading manga.
+        <br>
+        <figure>
+            <img src="images\zach_bio_pic.jpg" alt="personal picture" class="about__us_image">
+        </figure>
+        <br><b>Zachary Martin</b>
+        <br>
+        Zachary Martin is a Columbus-based full-stack software developer with a passion for travel, the outdoors,
+        gardening, and technology. His passion for technology started very early, when he took an interest in
+        gaming. In his early 20's, he built his first gaming pc, and computers for his father's law practice.
+        From there, his interest in hardware and software design grew. Though his passion was in technology,
+        it was his love for the outdoors and interest in life science that drove his to pursue a Bachelors degree
+        in Biology at Ohio University, which he completed in 2009. After years of working in healthcare, Zach
+        decided he wanted to turn his interest in technology into a career, and to leave his career in healthcare
+        behind! He is currently enrolled in a top-rated coding bootcamp through We Can Code It, and will have his
+        certification completed in August 2022. Zach is enthusiastic about growing and gaining new skills as a
+        software developer and is looking forward to a future in the field of IT!
+        <br>
+        <figure>
+            <img src="images\roger_bio_pic.jpg" alt="personal picture" class="about__us_image">
+        </figure>
+        <br><b>Roger Stevens</b>
+        <br>
         </p>
     </section>
-    <section id="contactUs">
-        <h2 class="contact__us_header">Contact Us</h2>
-        <ul>
-            <li>Email: team1@jacenterprises.com</li>
-            <li>Contact Number: (555)-BIRDING (247-3464)</li>
-        </ul>
-    </section>
-</main>
+    <main>
+        <footer class="footer">
+            <small>&copy Team 1 @ WCCI 2022. All Rights Reserved.</small>
+                <div id="footer-links">
+                    <ul>
+                        <li><h5>JAC Enterprises</h5></li>
+                        <li><a href="aboutUs.html">About Us</a></li>
+                    </ul>
+                    <ul>
+                        <li><h5>Follow Us</h5></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Pinterest</a></li>
+                        <li><a href="#">TikTok</a></li>
+                    </ul>
 
-</body>
-<footer>
-    <small>&copy Team 1 @ WCCI 2022</small>
-</footer>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </footer>
+
 </html>
