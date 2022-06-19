@@ -1,6 +1,5 @@
 package org.wecancodeit.birdwatcher;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -16,27 +15,21 @@ public class Country {
     private String location;
     private String description;
     private String urlImage;
-    @OneToMany(mappedBy = "country")
-    @JsonIgnore
-    private Collection<Bird> birds;
-//    //potential for deletion below
-//    @ManyToMany(mappedBy = "habitats")
-//    private Collection<Habitat> Habitats;
-//    //potential for deletion below
-//    @ManyToMany(mappedBy = "birds")
-//    private Collection<Bird> Birds;
-//    //potential for deletion above
+    @ManyToMany (mappedBy = "countries")
+    private Collection<Region> regions;
 
-    //Peru has Coast, Mountains, Jungles. Ecuador has Coast, Mountains, Jungles
+    //I feel strongly about writing out continent. But maybe we don't need it.
+    //Peru has Coast, Mountains, Jungles. Ecuador has Coast, Mountains, Jungles.
 
     public Country(String location){
 
     }
 
-    public Country(String location, String description, String urlImage) {
+    public Country(String location, String description, String urlImage, Region... regions) {
         this.location = location;
         this.description = description;
         this.urlImage = urlImage;
+        this.regions = Arrays.asList(regions);
     }
 
     public Long getId() {
@@ -56,15 +49,14 @@ public class Country {
         return description;
     }
 
-
-    public Collection<Bird> getBirds() {
-        return birds;
+    public Collection<Region> getRegions(){
+        return regions;
 
     }
 
     @Override
     public String toString() {
-        return "Country{" + "id=" + id + ", location='" + location + '\'' + '}';
+        return "Country{" + "id=" + id + ", location='" + location + ", description='" + description + ", urlImage='" + urlImage + '\'' + '}';
     }
 
 }

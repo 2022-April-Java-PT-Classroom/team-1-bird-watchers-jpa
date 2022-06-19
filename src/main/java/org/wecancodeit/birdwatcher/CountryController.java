@@ -20,7 +20,7 @@ public class CountryController{
     }
     @GetMapping("/countries/{location}")
     public String displaySingleCountry(@PathVariable String location, Model model){
-        Country retrievedCountry = countryRepo.findByCountryLocation(location);
+        Country retrievedCountry = countryRepo.findLocationByCountry(location);
         model.addAttribute("country", retrievedCountry);
         return "countryView";
         //This return is subject to change depending on html path.
