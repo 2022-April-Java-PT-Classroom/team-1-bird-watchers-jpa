@@ -18,4 +18,10 @@ public class HabitatController {
        model.addAttribute("habitat", retrievedHabitat);
        return "habitatTemplate";
     }
+
+    @RequestMapping("/habitat")
+    public String displayHabitats(Model model) {
+        model.addAttribute("habitats", habitatRepo.findAll());
+        return "habitatTemplate";
+    }
 }
