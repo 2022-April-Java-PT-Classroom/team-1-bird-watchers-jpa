@@ -7,7 +7,7 @@ import java.util.List;
 
 @Repository
 public interface RegionRepository extends CrudRepository<Region, Long> {
-    List<Region> findbyname(String name);
+    List<Region> findByName(String name);
 
 
 }
