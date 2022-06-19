@@ -17,6 +17,9 @@ public class Populator implements CommandLineRunner {
     @Resource
     private BirdRepository birdRepo;
 
+    public Populator() {
+    }
+
     @Override
     public void run(String... args) throws Exception {
 
