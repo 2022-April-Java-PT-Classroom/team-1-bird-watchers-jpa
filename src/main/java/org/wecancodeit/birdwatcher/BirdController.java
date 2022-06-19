@@ -6,6 +6,7 @@ import org.wecancodeit.birdwatcher.BirdRepository;
 import javax.annotation.Resource;
 
 @Controller
+
 public class BirdController {
     @Resource
     private BirdRepository birdRepo;
