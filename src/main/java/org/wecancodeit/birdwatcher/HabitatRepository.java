@@ -1,4 +1,8 @@
 package org.wecancodeit.birdwatcher;
 
-public class HabitatRepository {
+import org.springframework.data.repository.CrudRepository;
+
+public interface HabitatRepository extends CrudRepository<Habitat, Long> {
+
+    Habitat findHabitatById(String id);
 }
