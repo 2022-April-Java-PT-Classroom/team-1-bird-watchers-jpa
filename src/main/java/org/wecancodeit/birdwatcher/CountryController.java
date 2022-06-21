@@ -23,6 +23,6 @@ public class CountryController{
         Country retrievedCountry = countryRepo.findByLocation(location);
         model.addAttribute("country", retrievedCountry);
         return "countryTemplate";
-
+        //This return is subject to change depending on html path.
     }
 }
