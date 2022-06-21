@@ -1,5 +1,12 @@
 package org.wecancodeit.birdwatcher;
 
+<<<<<<< HEAD
+import javax.persistence.Entity;
+
+@Entity
+public class Region {
+
+=======
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.Entity;
@@ -33,6 +40,7 @@ public class Region {
     public Long getId() {
         return id;
     }
+>>>>>>> main
 
 
 }
