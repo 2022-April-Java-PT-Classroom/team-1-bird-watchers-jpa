@@ -100,11 +100,9 @@ header nav ul li a {
 #hero-image {
     height: 580px;
     padding-top: 1px;
-<<<<<<< HEAD
-    background: #e8eced url('static/images/pic1.jpg') no-repeat center;
-=======
+
     background: #e8eced url('https://cdn.pixabay.com/photo/2020/07/14/13/38/puffin-5404178_1280.jpg') no-repeat center;
->>>>>>> main
+
 }
 #hero-image h2 {
     margin: 180px 0 40px 0;
