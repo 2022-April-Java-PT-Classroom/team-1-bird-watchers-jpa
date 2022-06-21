@@ -15,14 +15,14 @@ public class CountryController{
     @RequestMapping({"/countries", "/", ""})
     public String displayCountries(Model model){
         model.addAttribute("countries", countryRepo.findAll());
-        return "countriesView";
-        //This return is subject to change depending on html path
+        return "countryTemplate";
+
     }
     @GetMapping("/countries/{location}")
     public String displaySingleCountry(@PathVariable String location, Model model){
-        Country retrievedCountry = countryRepo.findByCountryLocation(location);
+        Country retrievedCountry = countryRepo.findByLocation(location);
         model.addAttribute("country", retrievedCountry);
-        return "countryView";
-        //This return is subject to change depending on html path.
+        return "countryTemplate";
+
     }
 }

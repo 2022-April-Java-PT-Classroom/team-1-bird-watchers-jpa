@@ -16,12 +16,12 @@ public class RegionController {
     @RequestMapping({"/Region", "/", ""})
     public String displayRegions(Model model) {
         model.addAttribute("regions", regionRepo.findAll());
-        return "regionsView";
+        return "regionTemplate";
     }
 
     @GetMapping("/regions/{regionLocation}")
     public String displaySingleRegion(@PathVariable String regionName, Model model) {
-        model.addAttribute("Region", regionRepo.findByName(regionName));
-        return "regionView";
+        model.addAttribute("Region", regionRepo.findRegionByRegionName(regionName));
+        return "regionTemplate";
     }
 }

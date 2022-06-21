@@ -5,6 +5,8 @@ import org.springframework.stereotype.Repository;
 
 
 @Repository
-public interface BirdRepository extends CrudRepository {
-    Bird findBirdById(Long id);
+public interface BirdRepository extends CrudRepository <Bird, Long> {
+    Bird findByName(String name);
+
+
 }
