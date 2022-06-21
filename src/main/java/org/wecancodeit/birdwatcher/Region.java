@@ -20,8 +20,6 @@ public class Region {
     @GeneratedValue
     private Long id;
     private String regionName;
-
-
     public Region(String regionName) {
         this.regionName = regionName;
     }

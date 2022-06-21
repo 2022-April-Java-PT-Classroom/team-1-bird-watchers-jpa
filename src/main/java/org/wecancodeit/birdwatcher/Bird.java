@@ -57,12 +57,13 @@ public class Bird {
     }
 
     public Bird(String name, String imageUrl, String description, String birdOrder, Country country, Region region, Habitat habitat) {
-        this.id= id;
         this.name=name;
         this.imageUrl=imageUrl;
         this.description=description;
         this.birdOrder=birdOrder;
-
+        this.country=country;
+        this.region=region;
+        this.habitat=habitat;
     }
 
     @Override
