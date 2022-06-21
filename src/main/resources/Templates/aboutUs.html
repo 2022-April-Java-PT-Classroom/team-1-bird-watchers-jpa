@@ -1,118 +1,100 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" th:href="@{/css/aboutusstyles.css}"/>
-    <title>About Us</title>
+    <link rel="stylesheet" href="static/styles/aboutusStyles.css">
+    <title>JAC Enterprises</title>
 </head>
-    </header>
-    <main>
-        <section class="about__us_info">
-            <h2 style="text-align:center">Meet The Team</h2>
-            <div id="features">
-                <div class="wrapper">
-                    <ul>
-                        <li class="feature-1">
-                            <td><img src="../static/images/steph_bio_pic.jpg" width="200" th:src="@{images/steph_bio_pic.jpg}"/>
-                            </td>
-                            <h4><b>Stephanie Ingraham</b></h4>
-                            <p>Stephanie is a Junior Level Full-Stack Developer
-                                born and raised in Huntsville, AL. As a wife and
-                                mother, Stephanie loves having experiences with her
-                                family to profound amazing memories. Her hobbies
-                                include: hiking, gaming, and reading manga.</p>
-                            <a href="#" class="button-1">LinkedIn</a>
-                        </li>
-                        <li class="feature-2">
-                            <td><img src="../static/images/sade_bio_pic.jpg" width="200" th:src="@{images/sade_bio_pic.jpg}"/>
-                            </td>
-                            <h4><b>Andera Fells</b></h4>
-                            <th>Andera is currently located in Columbus, OH. Her love for learning,
-                                and taking on challenging task set her on the path of coding. She is a full stack developer
-                                who loves to see projects come "alive". Andera is a dedicated team player, but also works
-                                well on her own. Outside of development she enjoys researching anything that catches her
-                                attention from music,dance, how the mind works etc.. Most importantly she loves spending time
-                                with her family!</th>
-                            <a href="#" class="button-1">LinkedIn</a>
-                        </li>
-                        <li class="feature-3">
-                            <td><img src="../static/images/gail_bio_pic.jpg" width="200" th:src="@{images/gail_bio_pic.jpg}"/>
-                            </td>
-                            <h4><b>Gail Cowley</b></h4>
-                            <th>Gail is a Cleveland based web-developer. Her love of learning drives her
-                                to be on the cutting edge and
-                                up to date with the latest strategies in coding. Whether she is flying
-                                solo or on a team she strives to do
-                                her best to create work that is creative and engaging.</th>
-                            <a href="#" class="button-1">LinkedIn</a>
-                        </li>
-                        <li class="feature-4">
-                            <td><img src="../static/images/zach_bio_pic.jpg" width="200" th:src="@{images/zach_bio_pic.jpg}"/>
-                            </td>
-                            <h4><b>Zachary Martin</b></h4>
-                            <th>Zachary is a
-                                Columbus-based full-stack
-                                software developer with a
-                                passion for travel, the
-                                outdoors,
-                                gardening, and technology. His
-                                passion for technology started
-                                very early, when he took an
-                                interest in
-                                gaming. In his early 20's, he
-                                built his first gaming pc, and
-                                computers for his father's law
-                                practice.
-                                From there, his interest in
-                                hardware and software design
-                                grew. Though his passion was in
-                                technology,
-                                it was his love for the outdoors
-                                and interest in life science
-                                that drove his to pursue a
-                                Bachelors degree
-                                in Biology at Ohio University,
-                                which he completed in 2009.
-                                After years of working in
-                                healthcare, Zach
-                                decided he wanted to turn his
-                                interest in technology into a
-                                career, and to leave his career
-                                in healthcare
-                                behind! Zach is
-                                enthusiastic about growing and
-                                gaining new skills as a
-                                software developer and is
-                                looking forward to a future in
-                                the field of IT!</th>
-                            <a href="#" class="button-1">LinkedIn</a>
-                        </li>
-                        <li class="feature-5">
-                            <td><img src="../static/images/sam_bio_pic.jpg" width="200" th:src="@{images/sam_bio_pic.jpg}"/>
-                            </td>
-                            <h4><b>Samuel Leiva</b></h4>
-                            <p>Sam is a full-stack Software Developer, currently living in Cincinnati, OH. He has a
-                                Bachelor’s degree in Business, and his primary focus is to create solutions for business. He
-                                is both driven and self-motivated, and he is constantly experimenting with new technologies
-                                and techniques. Sam is very passionate about Web Development and strives to better himself
-                                as a developer.</p>
-                            <a href="#" class="button-1">LinkedIn</a>
-                        </li>
-                        <li class="feature-6">
-                            <td><img src="../static/images/roger_bio_pic.jpg" width="200" th:src="@{images/sroger_bio_pic.jpg}"/>
-                            </td>
-                            <h4><b>Roger Stevens</b></h4>
-                            <th>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis turpis ac libero interdum, id fringilla purus feugiat. Etiam malesuada mattis nibh at bibendum.</th>
-                            <a href="#" class="button-1">LinkedIn</a>
-                        </li>
-                        <div class="clear"></div>
-                    </ul>
-                </div>
-            </div>
-
-
-
-
+<body>
+<header>
+    <div class="wrapper">
+        <h1>JAC Enterprises<span class="color">.</span></h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="birdWatching.html">Bird Watching</a></li>
+                <li><a href="#scavengerHunt">Scavenger Hunt</a></li>
+                <li><a href="#bookNow">Book Now</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div id="hero-image">
+    <div class="wrapper">
+        <h2><strong>Developers</strong><br/>
+            Meet the Team </h2>
+        <a href="#" class="button-1">READY TO WORK</a>
+    </div>
+</div>
+<div id="cta">
+    <div class="developers" id="developers">
+        <h3>Meet the Team</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod leo a nibh dignissim tincidunt. Nam ultricies odio ac neque suscipit volutpat. Ut dictum adipiscing felis sed malesuada. Integer porta sem nec nibh hendrerit imperdiet. </p>
+    </div>
+</div>
+<div id="features">
+    <div class="wrapper">
+        <ul>
+            <li class="feature-1">
+                <img src="/src/main/resources/static/Images/BioPics/steph_bio_pic.jpg" alt="" />
+                <h4>Sthepanie</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis turpis ac libero interdum, id fringilla purus feugiat. Etiam malesuada mattis nibh at bibendum.</p>
+                <a href="#" class="button-1">LinkedIn</a>
+            </li>
+            <li class="feature-2">
+                <img src="/src/main/resources/static/Images/BioPics/sade_bio_pic.jpg" alt="" />
+                <h4>Sade</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis turpis ac libero interdum, id fringilla purus feugiat. Etiam malesuada mattis nibh at bibendum.</p>
+                <a href="#" class="button-1">LinkedIn</a>
+            </li>
+            <li class="feature-3">
+                <img src="/src/main/resources/static/Images/BioPics/gail_bio_pic.jpg" alt="" />
+                <h4>Gail</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis turpis ac libero interdum, id fringilla purus feugiat. Etiam malesuada mattis nibh at bibendum.</p>
+                <a href="#" class="button-1">LinkedIn</a>
+            </li>
+            <li class="feature-4">
+                <img src="/src/main/resources/static/Images/BioPics/zach_bio_pic.jpg" alt="" />
+                <h4>Zach</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis turpis ac libero interdum, id fringilla purus feugiat. Etiam malesuada mattis nibh at bibendum.</p>
+                <a href="#" class="button-1">LinkedIn</a>
+            </li>
+            <li class="feature-5">
+                <img src="/src/main/resources/static/Images/BioPics/sam_bio_pic.jpg" alt="" />
+                <h4>Sam</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis turpis ac libero interdum, id fringilla purus feugiat. Etiam malesuada mattis nibh at bibendum.</p>
+                <a href="#" class="button-1">LinkedIn</a>
+            </li>
+            <li class="feature-6">
+                <img src="/src/main/resources/static/Images/BioPics/roger_bio_pic.jpg" alt="" />
+                <h4>Roge</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis turpis ac libero interdum, id fringilla purus feugiat. Etiam malesuada mattis nibh at bibendum.</p>
+                <a href="#" class="button-1">LinkedIn</a>
+            </li>
+            <div class="clear"></div>
+        </ul>
+    </div>
+</div>
+<footer>
+    <div class="wrapper">
+        <div id="footer-info">
+            <p>Copyright 2022 JAC Enterprises.</p>
+            <p><a href="#">All rights reserved.</a> </p>
+        </div>
+        <div id="footer-links">
+            <ul>
+                <li><h5>JAC Enterprises</h5></li>
+                <li><a href="developers.html">Developers</a></li>
+            </ul>
+            <ul>
+                <li><h5>Follow Us</h5></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">TikTok</a></li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+    </div>
+</footer>
+</body>
+</html>
