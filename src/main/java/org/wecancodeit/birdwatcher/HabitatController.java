@@ -13,9 +13,15 @@ public class HabitatController {
     private HabitatRepository habitatRepo;
 
     @RequestMapping("/habitat/{name}")
-    public String displaySingleHabitat(@PathVariable String id, Model model){
+    public String displaySingleHabitat(@PathVariable Long id, Model model){
        Habitat retrievedHabitat = habitatRepo.findHabitatById(id);
        model.addAttribute("habitat", retrievedHabitat);
        return "habitatTemplate";
+    }
+
+    @RequestMapping("/habitat")
+    public String displayHabitats(Model model) {
+        model.addAttribute("habitats", habitatRepo.findAll());
+        return "habitatTemplate";
     }
 }

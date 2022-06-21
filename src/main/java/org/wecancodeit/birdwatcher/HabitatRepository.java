@@ -4,5 +4,5 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface HabitatRepository extends CrudRepository<Habitat, Long> {
 
-    Habitat findHabitatById(String id);
+    Habitat findHabitatById(Long id);
 }
