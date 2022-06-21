@@ -18,11 +18,10 @@ public class CountryController{
         return "countryTemplate";
 
     }
-    @GetMapping("/countries/{location}")
-    public String displaySingleCountry(@PathVariable String location, Model model){
-        Country retrievedCountry = countryRepo.findByLocation(location);
+    @GetMapping("/countries/{id}")
+    public String displaySingleCountry(@PathVariable Long id, Model model){
+        Country retrievedCountry = countryRepo.findCountryById(id);
         model.addAttribute("country", retrievedCountry);
         return "countryTemplate";
-        //This return is subject to change depending on html path.
     }
 }
