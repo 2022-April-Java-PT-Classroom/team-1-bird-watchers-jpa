@@ -1,11 +1,8 @@
 package org.wecancodeit.birdwatcher;
-import javax.persistence.Entity;
+import javax.persistence.*;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -17,11 +14,14 @@ public class Region {
     @GeneratedValue
     private Long id;
     private String regionName;
+    @Lob
+    private String description;
     @OneToMany(mappedBy = "region")
     private Collection<Bird> birds;
 
-    public Region(String regionName, Bird...birds) {
+    public Region(String regionName, String description, Bird...birds) {
         this.regionName = regionName;
+        this.description=description;
         this.birds = new ArrayList<>(Arrays.asList(birds));
     }
 
@@ -30,6 +30,10 @@ public class Region {
 
     public String getRegionName() {
         return regionName;
+    }
+
+    public String getDescription() {
+        return description;
     }
 
     public Long getId() {
