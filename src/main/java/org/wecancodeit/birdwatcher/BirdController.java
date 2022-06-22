@@ -32,7 +32,7 @@ public class BirdController {
     public String displayBirdsByHabitat(@PathVariable Long id, Model model) {
        Habitat x = habitRepo.findById(id).get();
 
-        model.addAttribute("Habitat", x.getBirds());
+        model.addAttribute("Habitat",x);
         return "habitatTemplate";
     }
 
@@ -40,7 +40,7 @@ public class BirdController {
     public String displayBirdsByRegion(@PathVariable Long id, Model model) {
         Region x = regionRepo.findById(id).get();
 
-        model.addAttribute("Region", x.getBirds());
+        model.addAttribute("Region",x);
         return "regionTemplate";
     }
 
