@@ -12,7 +12,7 @@ public class CountryController{
     @Resource
     private CountryRepository countryRepo;
 
-    @RequestMapping({"/countries", "/", ""})
+    @RequestMapping({"/countries"})
     public String displayCountries(Model model){
         model.addAttribute("countries", countryRepo.findAll());
         return "countryTemplate";
