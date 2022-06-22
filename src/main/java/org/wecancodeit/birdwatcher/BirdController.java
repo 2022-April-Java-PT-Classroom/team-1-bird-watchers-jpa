@@ -36,6 +36,22 @@ public class BirdController {
         return "habitatTemplate";
     }
 
+    @RequestMapping("/birdsbyregion/{id}")
+    public String displayBirdsByRegion(@PathVariable Long id, Model model) {
+        Region x = regionRepo.findById(id).get();
+
+        model.addAttribute("Region", x.getBirds());
+        return "regionTemplate";
+    }
+
+    @RequestMapping("/birdsbycountry/{id}")
+    public String displayBirdsByCountry(@PathVariable Long id, Model model) {
+        Country x = countryRepo.findById(id).get();
+
+        model.addAttribute("Country", x.getBirds());
+        return "CountryTemplate";
+    }
+
 }
 
 
