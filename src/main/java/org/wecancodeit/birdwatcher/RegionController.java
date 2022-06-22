@@ -19,7 +19,7 @@ public class RegionController {
         return "regionTemplate";
     }
 
-    @GetMapping("/regions/{regionName}")
+    @GetMapping("/regions/{id}")
     public String displaySingleRegion(@PathVariable Long id, Model model) {
         model.addAttribute("Region", regionRepo.findRegionById(id));
         return "regionTemplate";
