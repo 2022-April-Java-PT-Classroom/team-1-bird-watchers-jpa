@@ -1,90 +1,68 @@
-*{
-box-sizing: border-box;
-margin: 0;
-padding: 0;
+body {
+    background-color: #fff;
+    color: #777;
+    font: normal 15px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 }
-html{
-font-family: 'Times New Roman', Times, serif;
-font-size: 16px;
-color: black;
+p {
+    line-height: 20px;
+    margin-bottom: 20px;
 }
-
-li{padding-right: 10px;
-    text-decoration: none;
-    list-style-type: none;
+h1 {
+    font-family: 'Crete Round', serif;
+    font-weight: bold;
+    color: #444;
+    font-size: 45px;
+    margin-bottom: 20px;
 }
-
-.wrapper{
-    display:flex;
-    justify-content: space-between;
-    margin-left:20px;
-    margin-right:20px;
-}
-
-header {
-    background-color: #white;
-    color: #black;
-    padding: 20px 0;
-}
-
-header nav ul {
-    display: flex;
-}
-
-header nav ul li {
-    padding-right: 10px;
-    text-decoration: none;
-    list-style-type: none;
-}
-
-header nav ul li a {
-    border-radius: 3px;
-    color: #ddd;
-    padding: 3px;
-    text-decoration: none;
-    list-style-type:none;
-}
-
-body{
-    background-image: url("https://images.pexels.com/photos/3584309/pexels-photo-3584309.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-    background-size: cover;
-}
-.About__birdwatching_wrapper{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    max-height:fit-content;
-
-    
-}
-.watching{
-    max-width:auto;
-    max-height:700px;
-    margin-top:20px;
-    margin-left: 30px;
-    border-radius: 10px;
-}
-.bird__watching_info{
-    max-height:700px;
-    margin-top: 20px;
-    margin-bottom: 40px;
-    margin-left: 40px;
-    margin-right: 40px;
-    border: solid white 10px;
-    background-color: rgb(241, 238, 233);
-    padding: 40px;
+h2 {
+    font-weight: 300;
+    color: #444;
+    font-size: 55px;
+    text-transform: uppercase;
     text-align: center;
-    border-radius: 10px;
-    font-size: 22px;
+    margin-bottom: 20px;
 }
-.about__bird_watching_title{
-    margin-bottom: 50px;
-
+h3 {
+    font-size: 30px;
+    color: #444;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
 }
-footer{
-    background-color: #333333;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    padding: 1em;
-    font-size:20px
+h4 {
+    font-size: 24px;
+    color: #444;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+h5 {
+    font-size: 15px;
+    color: #444;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+a {
+    text-decoration: none;
+    color: #444;
+}
+a:hover {
+    color: #02b8dd;
+}
+strong {
+    font-weight: bold;
+}
+small {
+    font-size: 13px;
+    color: #777;
+    font-style: italic;
+}
+.clear {
+    clear: both;
+}
+.wrapper {
+    margin: 0 auto;
+    padding: 0 10px;
+    width: 940px;
 }
