@@ -19,9 +19,9 @@ public class HabitatController {
        return "habitatTemplate";
     }
 
-    @RequestMapping("/habitats")
+    @RequestMapping("/country")
     public String displayHabitats(Model model) {
         model.addAttribute("habitats", habitatRepo.findAll());
-        return "habitatTemplate";
+        return "countryTemplate";
     }
 }
