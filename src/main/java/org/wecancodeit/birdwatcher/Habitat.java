@@ -3,10 +3,7 @@ package org.wecancodeit.birdwatcher;
 import org.wecancodeit.birdwatcher.Bird;
 import org.wecancodeit.birdwatcher.Region;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -18,10 +15,12 @@ public class Habitat {
     @GeneratedValue
     private Long id;
     private String name;
+    @Lob
     private String description;
     private String imageUrl;
     @OneToMany(mappedBy = "habitat")
     private Collection<Bird> birds;
+
 
     public Habitat(){
 
@@ -50,18 +49,9 @@ public class Habitat {
         return imageUrl;
     }
 
-
     public Collection<Bird> getBirds() {
         return birds;
 
-    }
-
-    @Override
-    public String toString() {
-        return "Habitat{" +
-                "Name='" + name + '\'' +
-                ", Description='" + description + '\'' +
-                '}';
     }
 
 }

@@ -1,9 +1,6 @@
 package org.wecancodeit.birdwatcher;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @Entity
 public class Bird {
@@ -13,25 +10,18 @@ public class Bird {
     private Long id;
     private String name;
     private String imageUrl;
+    @Lob
     private String description;
-    private String order;
+    private String birdOrder;
     @ManyToOne
-    private String country;
-    private String region;
-    private String habitat;
+    private Country country;
+    @ManyToOne
+    private Region region;
+    @ManyToOne
+    private Habitat habitat;
 
     public Bird() {
 
-    }
-
-    public Bird(String name, String imageUrl, String description, String order, String country, String region, String habitat) {
-        this.name=name;
-        this.imageUrl=imageUrl;
-        this.description=description;
-        this.order=order;
-        this.country=country;
-        this.region=region;
-        this.habitat=habitat;
     }
 
     public Long getId() {
@@ -50,20 +40,30 @@ public class Bird {
         return description;
     }
 
-    public String getOrder() {
-        return order;
+    public String getBirdOrder() {
+        return birdOrder;
     }
 
-    public String getCountry() {
+    public Country getCountry() {
         return country;
     }
 
-    public String getRegion() {
+    public Region getRegion() {
         return region;
     }
 
-    public String getHabitat() {
+    public Habitat getHabitat() {
         return habitat;
+    }
+
+    public Bird(String name, String imageUrl, String description, String birdOrder, Country country, Region region, Habitat habitat) {
+        this.name=name;
+        this.imageUrl=imageUrl;
+        this.description=description;
+        this.birdOrder=birdOrder;
+        this.country=country;
+        this.region=region;
+        this.habitat=habitat;
     }
 
     @Override
@@ -71,7 +71,7 @@ public class Bird {
         return "Bird{" +
                 "Name='" + name + '\'' +
                 ", Description='" + description + '\'' +
-                ", Order='" + order + '\'' +
+                ", Order='" + birdOrder + '\'' +
                 ", Country='" + country + '\'' +
                 ", Region='" + region + '\'' +
                 ", Habitat='" + habitat + '\'' +

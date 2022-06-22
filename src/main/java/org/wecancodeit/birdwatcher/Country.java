@@ -13,23 +13,21 @@ public class Country {
     @GeneratedValue
     private Long id;
     private String location;
+    @Lob
     private String description;
     private String urlImage;
-    @ManyToMany (mappedBy = "countries")
-    private Collection<Region> regions;
+    @OneToMany(mappedBy = "country")
+    private Collection<Bird> birds;
 
-    //I feel strongly about writing out continent. But maybe we don't need it.
-    //Peru has Coast, Mountains, Jungles. Ecuador has Coast, Mountains, Jungles.
 
-    public Country(String location){
-
+    public Country(){
     }
 
-    public Country(String location, String description, String urlImage, Region... regions) {
+    public Country(String location, String description, String urlImage, Bird...birds) {
         this.location = location;
         this.description = description;
         this.urlImage = urlImage;
-        this.regions = Arrays.asList(regions);
+        this.birds = new ArrayList<>(Arrays.asList(birds));
     }
 
     public Long getId() {
@@ -49,8 +47,8 @@ public class Country {
         return description;
     }
 
-    public Collection<Region> getRegions(){
-        return regions;
+    public Collection<Bird> getBirds() {
+        return birds;
 
     }
 

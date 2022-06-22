@@ -12,17 +12,16 @@ public class CountryController{
     @Resource
     private CountryRepository countryRepo;
 
-    @RequestMapping({"/countries", "/", ""})
+    @RequestMapping({"/countries"})
     public String displayCountries(Model model){
         model.addAttribute("countries", countryRepo.findAll());
-        return "countriesView";
-        //This return is subject to change depending on html path
+        return "countryTemplate";
+
     }
-    @GetMapping("/countries/{location}")
-    public String displaySingleCountry(@PathVariable String location, Model model){
-        Country retrievedCountry = countryRepo.findLocationByCountry(location);
+    @GetMapping("/countries/{id}")
+    public String displaySingleCountry(@PathVariable Long id, Model model){
+        Country retrievedCountry = countryRepo.findCountryById(id);
         model.addAttribute("country", retrievedCountry);
-        return "countryView";
-        //This return is subject to change depending on html path.
+        return "countryTemplate";
     }
 }
