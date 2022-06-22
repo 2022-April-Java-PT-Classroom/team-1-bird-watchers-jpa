@@ -14,29 +14,21 @@ public class Country {
     @GeneratedValue
     private Long id;
     private String location;
+    @Lob
     private String description;
     private String urlImage;
     @OneToMany(mappedBy = "country")
-    @JsonIgnore
     private Collection<Bird> birds;
-//    //potential for deletion below
-//    @ManyToMany(mappedBy = "habitats")
-//    private Collection<Habitat> Habitats;
-//    //potential for deletion below
-//    @ManyToMany(mappedBy = "birds")
-//    private Collection<Bird> Birds;
-//    //potential for deletion above
 
-    //Peru has Coast, Mountains, Jungles. Ecuador has Coast, Mountains, Jungles
 
-    public Country(String location){
-
+    public Country(){
     }
 
-    public Country(String location, String description, String urlImage) {
+    public Country(String location, String description, String urlImage, Bird...birds) {
         this.location = location;
         this.description = description;
         this.urlImage = urlImage;
+        this.birds = new ArrayList<>(Arrays.asList(birds));
     }
 
     public Long getId() {
@@ -55,7 +47,6 @@ public class Country {
     public String getDescription(){
         return description;
     }
-
 
     public Collection<Bird> getBirds() {
         return birds;

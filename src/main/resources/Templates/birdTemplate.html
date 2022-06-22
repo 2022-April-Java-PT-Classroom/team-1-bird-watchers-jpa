@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Bird</title>
-    <link rel="stylesheet" href="styles/HabitatStyles.css">
+    <link rel="stylesheet" href="../static/styles/BirdStyles.css">
 </head>
 <body>
     <header>
@@ -33,13 +33,15 @@
     </figure>
     <figure class="mission__wrapper">
     <p class="mission">
-        We take pride if making sure you understand as much as possible about the individual birds, and the physical attributes of the birds you will see in your excursion. It is also helpful to know a little bit about bird taxonomy before your trip. Here is some info and a photo of the bird you selected We have also provided a list of the birds by order on this page!
+        We take pride if making sure you understand as much as possible about the individual birds, and the physical
+        attributes of the birds you will see in your excursion. It is also helpful to know a little bit about bird
+        taxonomy before your trip. Here is some info and a photo of the bird you selected We have also provided a list
+        of the birds by order on this page!
     </p>
     </figure>
 </article>
-<section class=about__habitat id="habitat__info">
-<div class="">
-    <h2 class="habitat__info_header">Here Is Some Information About The Bird (use thymeleaf)</h2>
+<section class="bird-list">
+    <h2 class="bird-list__heading">Here Is Some Information About The Bird (use thymeleaf)</h2>
     <ul class="list__of_birds">
         <li class="bird__list_item">
             <p>Name</p>
@@ -242,7 +244,7 @@
             <li>Contact Number: (555)-BIRDING (247-3464)</li>
         </ul>
     </section>
-    <small>&copy Team 1 @ WCCI</small>
+    <small>&copy Team 1 @ WCCI 2022</small>
 </footer>
 </footer>
 </body>

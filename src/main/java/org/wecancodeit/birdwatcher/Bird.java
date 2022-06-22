@@ -10,10 +10,10 @@ public class Bird {
     private Long id;
     private String name;
     private String imageUrl;
+    @Lob
     private String description;
+    private String birdOrder;
     @ManyToOne
-    private String order;
-    @ManyToMany
     private Country country;
     @ManyToOne
     private Region region;
@@ -40,8 +40,8 @@ public class Bird {
         return description;
     }
 
-    public String getOrder() {
-        return order;
+    public String getBirdOrder() {
+        return birdOrder;
     }
 
     public Country getCountry() {
@@ -57,16 +57,22 @@ public class Bird {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public Bird(Long id, String name, String imageUrl, String description, String order, Country country, Region region, Habitat habitat) {
 =======
     public Bird(String name, String imageUrl, String description, String order, Country country, Region region, Habitat habitat) {
 >>>>>>> main
         this.id= id;
+=======
+    public Bird(String name, String imageUrl, String description, String birdOrder, Country country, Region region, Habitat habitat) {
+>>>>>>> main
         this.name=name;
         this.imageUrl=imageUrl;
         this.description=description;
-        this.order=order;
-
+        this.birdOrder=birdOrder;
+        this.country=country;
+        this.region=region;
+        this.habitat=habitat;
     }
 
     @Override
@@ -74,7 +80,11 @@ public class Bird {
         return "Bird{" +
                 "Name='" + name + '\'' +
                 ", Description='" + description + '\'' +
+<<<<<<< HEAD
                 ", Order='" + order + '\'' +
+=======
+                ", Order='" + birdOrder + '\'' +
+>>>>>>> main
                 ", Country='" + country + '\'' +
                 ", Region='" + region + '\'' +
                 ", Habitat='" + habitat + '\'' +
