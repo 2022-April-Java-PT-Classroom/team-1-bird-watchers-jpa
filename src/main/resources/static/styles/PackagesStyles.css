@@ -1,0 +1,190 @@
+html {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgba(184, 176, 144, 0.562);
+   
+}
+.header{
+    color: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    background-image: linear-gradient(to left, rgba(120, 125, 155, 0.52), 
+                        rgba(5, 5, 0, 0.801)),url('images/background.jpg');
+ background-size: cover;
+ 
+}
+header{
+color: antiquewhite
+}
+.header__nav_list_item{
+margin-right: 15px;
+    display: flex;
+    align-items: right;
+    align-content: flex-end;
+    list-style-type: none;
+}
+header h1 {
+    margin-left: 7rem;
+    font-size:7rem;
+}
+
+/* h2 {
+    font-weight: 300;
+    color: antiquewhite;
+    font-size: 55px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+} */
+/* h3 {
+    font-size: 30px;
+   color: antiquewhite;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+} */
+h4 {
+    font-size: 24px;
+    color: #444;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+h5 {
+    font-size: 15px;
+    color: #444;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+/* a {
+    text-decoration: none;
+    color: #444;
+} */
+/* a:hover {
+    color: #02B8DD;
+} */
+/* strong {
+    font-weight: bold;
+} */
+/* small {
+    font-size: 13px;
+    color: #777;
+    font-style: italic;
+} */
+.clear {
+    clear: both;
+}
+.wrapper {
+    margin: 0 auto;
+    padding: 0 10px;
+    width: 80%;
+}
+/* 
+  
+/* #hero-image {
+    height: 580px;
+    padding-top: 1px;
+    background: #E8ECED url('https://cdn.pixabay.com/photo/2019/08/16/13/14/condor-4410243_1280.jpg') no-repeat center;
+}
+#hero-image h2 {
+    margin: 180px 0 40px 0;
+} */ */
+.button-1 {
+    display: block;
+    text-align: center;
+    background: #444;
+    border-radius: 3px;
+    color: #fff;
+    width: 180px;
+    height: 50px;
+    font-size: 20px;
+    line-height: 50px;
+    margin: 0 auto;
+}
+.button-1:hover {
+    background-color: #02B8DD;
+    color: #fff;
+}
+#primary-content {
+    background-color: #F8FAFA;
+    padding: 60px 0;
+    text-align: center;
+}
+#primary-content h3 {
+    display: block;
+    margin: 0 auto 20px auto;
+    width: 400px;
+    border-bottom: 1px solid #02B8DD;
+    padding: 0 0 20px 0;
+}
+#primary-content a img {
+    justify-content: center;
+    width: 90%;
+}
+#cta {
+    padding: 60px 0;
+    text-align: center;
+}
+#cta h3 {
+    display: block;
+    margin: 0 auto 20px auto;
+    width: 400px;
+    border-bottom: 1px solid #02B8DD;
+    padding: 0 0 20px 0;
+}
+.button-2 {
+    display: block;
+    margin: 0 auto;
+    border: 2px solid #02B8DD;
+    color: #02B8DD;
+    border-radius: 3px;
+    width: 180px;
+    height: 50px;
+    font-size: 20px;
+    line-height: 50px;
+}
+.button-2:hover {
+    background-color: #02B8DD;
+    color: #fff;
+}
+#features ul {
+    padding: 5rem;
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 1000px;
+    justify-content: center;
+    align-content: space-around;
+}
+#features ul li {
+    width: 300px;
+    padding-top: 80px;
+    margin-right: 10px;
+    text-align: center;
+}
+#features ul li img {
+    height: auto;
+    border-radius: 10px;
+}
+footer {
+    padding: 60px 0;
+    background-color: #F8FAFA;
+}
+#footer-info {
+    width: 380px;
+    float: left;
+    margin-top: 10px;
+}
+#footer-links {
+    width: 520px;
+    float: right;
+}
+#footer-links ul {
+    width: 150px;
+    float: left;
+    margin-left: 20px;
+}
+#footer-links ul li {
+    margin: 10px 0;
+}
