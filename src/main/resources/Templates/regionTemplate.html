@@ -48,7 +48,7 @@
     <h3 class="bird__list_click">Click Link Below To View A Photo And Information About The Bird</h3>
     <!-- Add Thymeleaf to populate list of birds in this habitat -->
     <ul class="list__of_birds" th:each="bird : ${Region.birds}">
-        <li th:text="${bird.name}" class="bird__list_item">
+        <li> <a th:href="@{'/bird/' + ${bird.id}}" th:text="${bird.name}" class="bird__list_item"></a>
         </li>
     </ul>
 </section>

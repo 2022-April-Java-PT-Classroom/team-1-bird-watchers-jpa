@@ -21,10 +21,11 @@ public class BirdController {
     @Resource
     private RegionRepository regionRepo;
 
-    @GetMapping("/bird/{name}")
-    public String displaySingleBird(@PathVariable String name, Model model){
-        Bird retrievedBird = birdRepo.findByName(name);
-        model.addAttribute("Bird", retrievedBird);
+    @GetMapping("/bird/{id}")
+    public String displaySingleBird(@PathVariable Long id, Model model){
+        Bird x = birdRepo.findById(id).get();
+
+        model.addAttribute("Bird", x);
         return "birdTemplate";
     }
 
