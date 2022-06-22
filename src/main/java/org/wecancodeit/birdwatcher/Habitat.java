@@ -20,6 +20,8 @@ public class Habitat {
     private String imageUrl;
     @OneToMany(mappedBy = "habitat")
     private Collection<Bird> birds;
+
+
     public Habitat(){
 
     }

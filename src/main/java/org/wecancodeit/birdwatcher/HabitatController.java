@@ -12,14 +12,14 @@ public class HabitatController {
     @Resource
     private HabitatRepository habitatRepo;
 
-    @RequestMapping("/habitat/{name}")
+    @RequestMapping("/habitat/{id}")
     public String displaySingleHabitat(@PathVariable Long id, Model model){
        Habitat retrievedHabitat = habitatRepo.findHabitatById(id);
        model.addAttribute("habitat", retrievedHabitat);
        return "habitatTemplate";
     }
 
-    @RequestMapping("/habitat")
+    @RequestMapping("/habitats")
     public String displayHabitats(Model model) {
         model.addAttribute("habitats", habitatRepo.findAll());
         return "habitatTemplate";

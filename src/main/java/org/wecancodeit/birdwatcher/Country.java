@@ -17,15 +17,18 @@ public class Country {
     @Lob
     private String description;
     private String urlImage;
+    @OneToMany(mappedBy = "country")
+    private Collection<Bird> birds;
 
 
-    public Country(String location){
+    public Country(){
     }
 
-    public Country(String location, String description, String urlImage) {
+    public Country(String location, String description, String urlImage, Bird...birds) {
         this.location = location;
         this.description = description;
         this.urlImage = urlImage;
+        this.birds = new ArrayList<>(Arrays.asList(birds));
     }
 
     public Long getId() {
@@ -43,6 +46,11 @@ public class Country {
 
     public String getDescription(){
         return description;
+    }
+
+    public Collection<Bird> getBirds() {
+        return birds;
+
     }
 
     @Override
