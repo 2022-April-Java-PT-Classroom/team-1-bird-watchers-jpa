@@ -48,7 +48,7 @@ public class BirdController {
     public String displayBirdsByCountry(@PathVariable Long id, Model model) {
         Country x = countryRepo.findById(id).get();
 
-        model.addAttribute("Country", x.getBirds());
+        model.addAttribute("Country", x);
         return "CountryTemplate";
     }
 
