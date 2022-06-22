@@ -49,7 +49,7 @@ public class BirdController {
         Country x = countryRepo.findById(id).get();
 
         model.addAttribute("Country", x);
-        return "CountryTemplate";
+        return "countryTemplate";
     }
 
 }
