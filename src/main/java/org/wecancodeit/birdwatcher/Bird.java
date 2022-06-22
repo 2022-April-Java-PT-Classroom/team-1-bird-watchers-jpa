@@ -56,7 +56,11 @@ public class Bird {
         return habitat;
     }
 
-    public Bird(Long id, String name, String imageUrl, String description, String order Country country, Region region, Habitat habitat) {
+<<<<<<< HEAD
+    public Bird(Long id, String name, String imageUrl, String description, String order, Country country, Region region, Habitat habitat) {
+=======
+    public Bird(String name, String imageUrl, String description, String order, Country country, Region region, Habitat habitat) {
+>>>>>>> main
         this.id= id;
         this.name=name;
         this.imageUrl=imageUrl;
