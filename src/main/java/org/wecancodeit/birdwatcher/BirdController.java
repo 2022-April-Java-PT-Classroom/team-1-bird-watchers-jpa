@@ -11,8 +11,8 @@ import javax.annotation.Resource;
 
 @Controller
 @RequestMapping("/bird")
-@GetMapping
-public
+
+
 public class BirdController {
     @Resource
     private BirdRepository birdRepo;
