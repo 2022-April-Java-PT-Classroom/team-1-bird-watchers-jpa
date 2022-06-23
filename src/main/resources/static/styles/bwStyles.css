@@ -79,10 +79,10 @@ header h1 {
     margin-top: 32px;
 }
 header h1 .color {
-    color: #02b8dd;
+    color: #02b8dd; float: right;
 }
 header nav {
-    float: right;
+   
 }
 header nav ul li {
     float: left;
