@@ -10,6 +10,8 @@ import org.wecancodeit.birdwatcher.BirdRepository;
 import javax.annotation.Resource;
 
 @Controller
+@RequestMapping("/bird")
+
 
 public class BirdController {
     @Resource
