@@ -2,33 +2,35 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static\styles\bwStyles.css">
     <title>Region</title>
-    <link rel="stylesheet" href="../styles/HabitatStyles.css">
 </head>
 
 <body>
-<header>
-    <div class="wrapper">
 
-        <nav>
-            <ul>
-                <li>
-                    <a href="src\main\resources\static\home.html">Home</a>
-                </li>
-                <li>
-                    <a href="aboutUs.html">About Us</a>
-                </li>
-                <li>
-                    <a href="#contactUs">Contact us</a>
-                </li>
-                <li>
-                    <a href="#">Scavenger Hunt</a>
-                </li>
-            </ul>
+    <header>
+        <nav class="navbar">
+            <h1>Regions</h1>
+            <a href="/">Home</a>
+            <a href="#aboutUs.html">Developers</a>
+            <div class="dropdown">
+                <button class="dropbtn">BirdWatching</button>
+                <div class="dropdown_content">
+                    <a href="#">IntroToBirdWatching</a>
+                    <a href="#">BirdWatchingInSouthAmerica</a>
+                    <a href="#">CountriesToExplore</a>
+                    <a href="#">RegionsInOurPackage</a>
+                    <a href="#">HabitatsToExperience</a>
+                    <a href="#">Packages</a>
+                </div>
+                <a href="#">ContactUs</a>
+            </div>
         </nav>
-        </div>
-</header>
+    </header>
+
 <h1 th:text="${Region.regionName}">Region</h1>
+
 <article class="mission__habitat_wrapper">
     <figure class="mission__wrapper">
         <p class="mission">
@@ -54,14 +56,24 @@
     </ul>
 </section>
 <footer class="footer">
-    <section id="contactUs">
-        <h2 class="contact__us_header">Contact Us</h2>
-        <ul>
-            <li>Email: team1@jacenterprises.com</li>
-            <li>Contact Number: (555)-BIRDING (247-3464)</li>
-        </ul>
-    </section>
-    <small>&copy Team 1 @ WCCI</small>
+    <div class="wrapper">
+        <div id="footer-info">
+            <p>Copyright 2022 JAC Enterprises.</p>
+            <p><a href="#">All rights reserved.</a> </p>
+        </div>
+        <div id="footer-links">
+            <ul>
+                <li><h5>JAC Enterprises</h5></li>
+                <li><a href="developers.html">Developers</a></li>
+            </ul>
+            <ul>
+                <li><h5>Follow Us</h5></li>
+                <li><a href="#">Facebook</a></li>
+                         <li><a href="#">TikTok</a></li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+    </div> Team 1 @ WCCI</small>
 </footer>
 </body>
 </html>
