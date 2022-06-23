@@ -15,7 +15,7 @@ h1 {
     margin-bottom: 20px;
 }
 .color{
-    color: #21c21c;
+    color: #02B8DD;
 }
 h2 {
     font-weight: 300;
@@ -51,7 +51,7 @@ a {
     color: #444;
 }
 a:hover {
-    color: #19eb06;
+    color: #02B8DD;
 }
 strong {
     font-weight: bold;
@@ -101,7 +101,7 @@ header nav ul li a {
     height: 580px;
     padding-top: 1px;
 
-    background: #e8eced url('https://cdn.pixabay.com/photo/2020/07/14/13/38/puffin-5404178_1280.jpg') no-repeat center;
+    background: #e8eced url('https://cdn.pixabay.com/photo/2021/11/30/13/03/condor-6835293_1280.jpg') no-repeat center;
 
 }
 #hero-image h2 {
@@ -120,7 +120,7 @@ header nav ul li a {
     margin: 0 auto;
 }
 .button-1:hover {
-    background-color: #19eb06;
+    background-color: #02B8DD;
     color: #fff;
 }
 #primary-content {
@@ -154,8 +154,8 @@ header nav ul li a {
 .button-2 {
     display: block;
     margin: 0 auto;
-    border: 2px solid #19eb06;
-    color: #19eb06;
+    border: 2px solid #02B8DD;
+    color: #02B8DD;
     border-radius: 3px;
     width: 180px;
     height: 50px;
@@ -163,8 +163,30 @@ header nav ul li a {
     line-height: 50px;
 }
 .button-2:hover {
-    background-color: #19eb06;
+    background-color: #02B8DD;
     color: #fff;
+}
+
+#features ul {
+    margin: 80px 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 1000px;
+    justify-content: center;
+    align-content: space-around;
+    
+}
+#features ul li {
+    width: 300px;
+    padding-top: 80px;
+    /* float: left; */
+    margin-right: 10px;
+    text-align: center;
+}
+#features ul li img {
+    width: 250px;
+    height: 200px;
+    border-radius: 10px;
 }
 
 footer {
