@@ -22,7 +22,7 @@ public class HabitatController {
     @RequestMapping("/habitats")
     public String displayAllHabitats(Model model){
         model.addAttribute("habitats", habitatRepo.findAll());
-        return "habitatTemplate";
+        return "habitatsTemplates";
     }
 
 //    @RequestMapping("/country")
