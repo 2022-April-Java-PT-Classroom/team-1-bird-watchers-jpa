@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Bird</title>
@@ -29,12 +29,12 @@
         </nav>
     </div>
 </header>
-<article class="mission__habitat_wrapper">
-    <h1 th:text="${Bird.name}">Bird Name</h1>
+<article  class="mission__habitat_wrapper">
+    <h1 th:text="${bird.name}">Bird Name</h1>
 
     <figure class="image__wrapper">
         <!-- Add Thymeleaf For Chosen Habitat Image -->
-        <img class="habitat__photo" th:src="${Bird.imageUrl}" alt="Bird Photo">
+        <img class= "habitat__photo" th:src="${bird.imageUrl}" alt="bird Photo">
     </figure>
     <figure class="mission__wrapper">
         <p class="mission">
@@ -46,24 +46,22 @@
         </p>
     </figure>
 </article>
-</article>
-</section>
-</div>
+
 <section class="bird-list">
     <h2 class="bird-list__heading">Here Is Some Information About The Bird (use thymeleaf)</h2>
     <ul class="list__of_birds">
-        <li class="bird__list_item" th:text="${Bird.name}">Bird Name
+        <li class="bird__list_item" th:text="${bird.name}">Bird Name
         </li>
-        <li class="bird__list_item" th:text="${Bird.description}">Bird Description
+        <li class="bird__list_item" th:text="${bird.description}">Bird Description
 
         </li>
-        <li class="bird__list_item" th:text="${Bird.birdOrder}">Bird Order
+        <li class="bird__list_item" th:text="${bird.birdOrder}">Bird Order
         </li>
-        <li class="bird__list_item" th:text="${Bird.country.location}">Bird Country
+        <li class="bird__list_item" th:text="${bird.country.location}">Bird Country
         </li>
-        <li class="bird__list_item" th:text="${Bird.region.regionName}">Bird Region
+        <li class="bird__list_item" th:text="${bird.region.regionName}">Bird Region
         </li>
-        <li class="bird__list_item" th:text="${Bird.habitat.name}">Bird Habitat
+        <li class="bird__list_item" th:text="${bird.habitat.name}">Bird Habitat
         </li>
     </ul>
 </section>
