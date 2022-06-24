@@ -7,8 +7,9 @@
 </head>
 <body>
 <header>
+
     <div class="wrapper">
-        <h1 th:text="${Habitat.name}">Habitat</h1>
+
         <nav>
             <ul>
                 <li>
@@ -27,10 +28,11 @@
         </nav>
     </div>
 </header>
+<!--<h1 th:text="${Habitat.name}">Habitat</h1>-->
 <article class="mission__habitat_wrapper">
     <figure class="image__wrapper">
         <!-- Add Thymeleaf For Chosen Habitat Image -->
-        <img class= "habitat__photo" th:src="${Habitat.imageUrl}" alt="Habitat Photo">
+<!--        <img class= "habitat__photo" th:src="${Habitat.imageUrl}" alt="Habitat Photo">-->
     </figure>
     <figure class="mission__wrapper">
         <p class="mission">
@@ -44,7 +46,7 @@
     <div class="">
         <h2 class="habitat__info_header">Here Is Some Information About The Habitat</h2>
         <!-- Add Thymeleaf For Chosen Habitat Description -->
-        <p class="habitat__description" th:text="${Habitat.description}">
+<!--        <p class="habitat__description" th:text="${Habitat.description}">-->
 
         </p>
     </div>
@@ -53,10 +55,10 @@
     <h2 class="bird__list_title">Birds You Will Likely See In This Habitat</h2>
     <h3 class="bird__list_click">Click Link Below To View A Photo And Information About The Bird</h3>
     <!-- Add Thymeleaf to populate list of birds in this habitat -->
-    <ul th:each="bird : ${Habitat.birds}" class="list__of_birds">
-        <li> <a th:href="@{'/bird/' + ${bird.id}}" th:text="${bird.name}" class="bird__list_item"></a>
-        </li>
-    </ul>
+<!--    <ul th:each="bird : ${Habitat.birds}" class="list__of_birds">-->
+<!--        <li> <a th:href="@{'/bird/' + ${bird.id}}" th:text="${bird.name}" class="bird__list_item"></a>-->
+<!--        </li>-->
+<!--    </ul>-->
 </section>
 <footer class="footer">
     <section id="contactUs">

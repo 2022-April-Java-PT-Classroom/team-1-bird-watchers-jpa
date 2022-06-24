@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles/CountriesStyles.css">
+    <title>Bird Watching by Country</title>
+</head>
+<body>
+<header>
+    <div class="wrapper">
+        <h1>JAC Enterprises<span class="color">.</span></h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="developers.html">Developers</a></li>
+                <div class="dropdown"><button class="dropbtn">BirdWatching<i class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                        <li><a href="birdWatching.html">Intro To BirdWatching</a></li>
+                        <li><a href="#deadlink/noTemplate">BirdWatching In SouthAmerica</a></li>
+                        <li><a href="countryTemplate.html">Countries To Explore</a></li>
+                        <li><a href="regionTemplate.html">Regions In Our Package</a></li>
+                        <li><a href="habitatTemplate.html">Habitats To Experience</a></li>
+                        <li><a href="packagesTemplate">Packages</a></li>
+                    </div>
+                </div>
+                <li><a href="">Book Now</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <div class="main">
+    <article th:each="bird: ${bird}">
+        <h1 th:text="${bird.name}">Bird Name</h1>
+        <figure class="image__wrapper">
+            <!-- Add Thymeleaf For Chosen Habitat Image -->
+            <img class= "habitat__photo" th:src="${bird.imageUrl}" alt="bird Photo">
+        </figure>
+    </article>
+    </div>
+
+</body>
+</html>
