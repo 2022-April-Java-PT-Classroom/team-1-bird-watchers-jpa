@@ -2,8 +2,8 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Habitat</title>
-    <link rel="stylesheet" href="../styles/HabitatStyles.css">
+    <title>Bird</title>
+    <link rel="stylesheet" href="../styles/developersStyles.css">
 </head>
 <body>
 <header>
@@ -26,7 +26,7 @@
         </nav>
     </div>
 </header>
-<article class="mission__habitat_wrapper">
+<article  class="mission__habitat_wrapper">
     <h1 th:text="${Bird.name}">Bird Name</h1>
     <figure class="image__wrapper">
         <!-- Add Thymeleaf For Chosen Habitat Image -->
@@ -41,6 +41,9 @@
         </p>
     </figure>
 </article>
+</article>
+</section>
+</div>
 <section class="bird-list">
     <h2 class="bird-list__heading">Here Is Some Information About The Bird (use thymeleaf)</h2>
     <ul class="list__of_birds">
@@ -59,7 +62,6 @@
         </li>
     </ul>
 </section>
-
 <footer class="footer">
     <section id="contactUs">
         <h2 class="contact__us_header">Contact Us</h2>
