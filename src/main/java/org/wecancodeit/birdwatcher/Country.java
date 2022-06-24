@@ -1,6 +1,5 @@
 package org.wecancodeit.birdwatcher;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -55,7 +54,7 @@ public class Country {
 
     @Override
     public String toString() {
-        return "Country{" + "id=" + id + ", location='" + location + '\'' + '}';
+        return "Country{" + "id=" + id + ", location='" + location + ", description='" + description + ", urlImage='" + urlImage + '\'' + '}';
     }
 
 }
