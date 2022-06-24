@@ -15,10 +15,10 @@ public class CountryController{
     @RequestMapping({"/countries"})
     public String displayCountries(Model model){
         model.addAttribute("countries", countryRepo.findAll());
-        return "countryTemplate";
+        return "countriesTemplate";
 
     }
-    @GetMapping("/countries/{id}")
+    @RequestMapping("/country/{id}")
     public String displaySingleCountry(@PathVariable Long id, Model model){
         Country retrievedCountry = countryRepo.findCountryById(id);
         model.addAttribute("country", retrievedCountry);

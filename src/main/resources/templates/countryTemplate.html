@@ -34,7 +34,7 @@
     </div>
 </header>
 
-<h1 th:text="${Bird.country.location}">Countries</h1>
+<h1 th:text="${country.location}">Countries</h1>
 <div class= "country" th:each="country: ${countries}">
             <a th:href="@{'/country/' + ${country.id}}" th:text="${country.location}" target="_blank">Countries</a>
 
