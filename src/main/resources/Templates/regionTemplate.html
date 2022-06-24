@@ -3,31 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/styles/bwStyles.css">
+    <link rel="stylesheet" href="../styles/developersStyles.css">
     <title>Region</title>
 </head>
 
 <body>
 
-    <header>
-        <nav class="navbar">
-            <h1>Regions</h1>
-            <a href="/">Home</a>
-            <a href="#aboutUs.html">Developers</a>
-            <div class="dropdown">
-                <button class="dropbtn">BirdWatching</button>
-                <div class="dropdown_content">
-                    <a href="#">IntroToBirdWatching</a>
-                    <a href="#">BirdWatchingInSouthAmerica</a>
-                    <a href="#">CountriesToExplore</a>
-                    <a href="#">RegionsInOurPackage</a>
-                    <a href="#">HabitatsToExperience</a>
-                    <a href="#">Packages</a>
+<header>
+    <div class="wrapper">
+        <h1>JAC Enterprises<span class="color">.</span></h1>
+        <nav>
+            <ul>
+                <li><a href="../">Home</a></li>
+                <li><a href="../developers/">Developers</a></li>
+                <div class="dropdown"><button class="dropbtn">BirdWatching<i class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                        <li><a href="../birdwatching/">Intro To BirdWatching</a></li>
+                        <li><a href="#">BirdWatching In SouthAmerica</a></li>
+                        <li><a href="../birds/">The Birds</a></li>
+                        <li><a href="../countries/">Countries To Explore</a></li>
+                        <li><a href="../regions/">Regions In Our Package</a></li>
+                        <li><a href="../habitats/">Habitats To Experience</a></li>
+                        <li><a href="../packages/">Packages</a></li>
+                    </div>
                 </div>
-                <a href="#">ContactUs</a>
-            </div>
+                <li><a href="../requestInfo">Contact Us</a></li>
+            </ul>
         </nav>
-    </header>
+    </div>
+</header>
 <article class="mission__habitat_wrapper">
     <h1 th:text="${region.regionName}">Region</h1>
 
@@ -55,25 +59,31 @@
         </li>
     </ul>
 </section>
-<footer class="footer">
+<footer>
     <div class="wrapper">
         <div id="footer-info">
-            <p>Copyright 2022 JAC Enterprises.</p>
-            <p><a href="#">All rights reserved.</a> </p>
+            <p>WCCI Group Project 1</p>
+            <p><a href="#">All rights reserved</a> I <a href="#">2022</a></p>
         </div>
         <div id="footer-links">
             <ul>
-                <li><h5>JAC Enterprises</h5></li>
-                <li><a href="developers.html">Developers</a></li>
+                <li><h5>Explore</h5></li>
+                <li><a href="../birds/">The Birds</a></li>
+                <li><a href="../countries/">Countries To Explore</a></li>
+                <li><a href="../regions/">Regions In Our Package</a></li>
+                <li><a href="../habitats/">Habitats To Experience</a></li>
+                <li><a href="../packages/">Packages</a></li>
             </ul>
             <ul>
-                <li><h5>Follow Us</h5></li>
+                <li><h5>Social</h5></li>
                 <li><a href="#">Facebook</a></li>
-                         <li><a href="#">TikTok</a></li>
+                <li><a href="#">Instagram</a></li>
+
             </ul>
+
         </div>
         <div class="clear"></div>
-    </div> Team 1 @ WCCI</small>
+    </div>
 </footer>
 </body>
 </html>

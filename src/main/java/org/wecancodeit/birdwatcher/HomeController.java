@@ -25,6 +25,12 @@ public class HomeController {
 
     }
 
+    @RequestMapping("/birdwatching")
+    public String displayBirdWatchingPage(Model model){
+        model.addAttribute("Packages", packagesRepository.findAll());
+        return "birdWatching";
+
+    }
     @RequestMapping("/countryTemplate")
     public String displayCountryPage(Model model){
         model.addAttribute("Packages", packagesRepository.findAll());
@@ -50,6 +56,13 @@ public class HomeController {
     public String displayRequestInfoPage(Model model){
         model.addAttribute("Packages", packagesRepository.findAll());
         return "requestInfo";
+
+    }
+
+    @RequestMapping("/packages")
+    public String displayPackages(Model model){
+        model.addAttribute("Packages", packagesRepository.findAll());
+        return "packagesTemplate";
 
     }
 }
