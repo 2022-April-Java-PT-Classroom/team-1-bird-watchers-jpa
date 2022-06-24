@@ -8,37 +8,40 @@
 <body>
 <header>
     <div class="wrapper">
+        <h1>JAC Enterprises<span class="color">.</span></h1>
         <nav>
             <ul>
-                <li>
-                    <a href="src\main\resources\static\home.html">Home</a>
-                </li>
-                <li>
-                    <a href="aboutUs.html">About Us</a>
-                </li>
-                <li>
-                    <a href="#contactUs">Contact us</a>
-                </li>
-                <li>
-                    <a href="#">Scavenger Hunt</a>
-                </li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="developers.html">Developers</a></li>
+                <div class="dropdown">
+                    <button class="dropbtn">BirdWatching<i class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                        <li><a href="birdWatching.html">Intro To BirdWatching</a></li>
+                        <li><a href="#deadlink/noTemplate">BirdWatching In SouthAmerica</a></li>
+                        <li><a href="countryTemplate.html">Countries To Explore</a></li>
+                        <li><a href="regionTemplate.html">Regions In Our Package</a></li>
+                        <li><a href="habitatTemplate.html">Habitats To Experience</a></li>
+                        <li><a href="packagesTemplate">Packages</a></li>
+                    </div>
+                </div>
+                <li><a href="#">Book Now</a></li>
             </ul>
         </nav>
-
     </div>
 </header>
-<article  class="mission__habitat_wrapper">
+<article class="mission__habitat_wrapper">
     <h1 th:text="${Bird.name}">Bird Name</h1>
 
     <figure class="image__wrapper">
         <!-- Add Thymeleaf For Chosen Habitat Image -->
-        <img class= "habitat__photo" th:src="${Bird.imageUrl}" alt="Bird Photo">
+        <img class="habitat__photo" th:src="${Bird.imageUrl}" alt="Bird Photo">
     </figure>
     <figure class="mission__wrapper">
         <p class="mission">
             We take pride if making sure you understand as much as possible about the individual birds, and the physical
             attributes of the birds you will see in your excursion. It is also helpful to know a little bit about bird
-            taxonomy before your trip. Here is some info and a photo of the bird you selected We have also provided a list
+            taxonomy before your trip. Here is some info and a photo of the bird you selected We have also provided a
+            list
             of the birds by order on this page!
         </p>
     </figure>
