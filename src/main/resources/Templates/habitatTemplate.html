@@ -7,29 +7,29 @@
 </head>
 <body>
 <header>
-
     <div class="wrapper">
-            <h1>JAC Enterprises<span class="color">.</span></h1>
-        <h1 th:text="${Habitat.name}">Habitat</h1>
-            <nav>
-                <ul>
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="developers.html">Developers</a></li>
-                    <div class="dropdown"><button class="dropbtn">BirdWatching<i class="fa fa-caret-down"></i></button>
-                        <div class="dropdown-content">
-                            <li><a href="birdWatching.html">Intro To BirdWatching</a></li>
-                            <li><a href="#deadlink/noTemplate">BirdWatching In SouthAmerica</a></li>
-                            <li><a href="countryTemplate.html">Countries To Explore</a></li>
-                            <li><a href="regionTemplate.html">Regions In Our Package</a></li>
-                            <li><a href="habitatTemplate.html">Habitats To Experience</a></li>
-                            <li><a href="packagesTemplate">Packages</a></li>
-                        </div>
+        <h1>JAC Enterprises<span class="color">.</span></h1>
+        <nav>
+            <ul>
+                <li><a href="../">Home</a></li>
+                <li><a href="../developers/">Developers</a></li>
+                <div class="dropdown"><button class="dropbtn">BirdWatching<i class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                        <li><a href="../birdwatching/">Intro To BirdWatching</a></li>
+                        <li><a href="#">BirdWatching In SouthAmerica</a></li>
+                        <li><a href="../birds/">The Birds</a></li>
+                        <li><a href="../countries/">Countries To Explore</a></li>
+                        <li><a href="../regions/">Regions In Our Package</a></li>
+                        <li><a href="../habitats/">Habitats To Experience</a></li>
+                        <li><a href="../packages/">Packages</a></li>
                     </div>
-                    <li><a href="#">Book Now</a></li>
-                </ul>
-            </nav>
-        </div>
+                </div>
+                <li><a href="../requestInfo">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
+
 <h1 th:text="${habitat.name}">Habitat</h1>
 <article class="mission__habitat_wrapper">
     <figure class="image__wrapper">
@@ -62,16 +62,31 @@
         </li>
     </ul>
 </section>
-<footer class="footer">
-    <section id="contactUs">
-        <h2 class="contact__us_header">Contact Us</h2>
-        <ul>
-            <li>Email: team1@jacenterprises.com</li>
-            <li>Contact Number: (555)-BIRDING (247-3464)</li>
-        </ul>
-    </section>
-    <small>&copy Team 1 @ WCCI 2022. All Rights Reserved.</small>
+<footer>
+    <div class="wrapper">
+        <div id="footer-info">
+            <p>WCCI Group Project 1</p>
+            <p><a href="#">All rights reserved</a> I <a href="#">2022</a></p>
+        </div>
+        <div id="footer-links">
+            <ul>
+                <li><h5>Explore</h5></li>
+                <li><a href="../birds/">The Birds</a></li>
+                <li><a href="../countries/">Countries To Explore</a></li>
+                <li><a href="../regions/">Regions In Our Package</a></li>
+                <li><a href="../habitats/">Habitats To Experience</a></li>
+                <li><a href="../packages/">Packages</a></li>
+            </ul>
+            <ul>
+                <li><h5>Social</h5></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
 
+            </ul>
+
+        </div>
+        <div class="clear"></div>
+    </div>
 </footer>
 </div>
 </body>

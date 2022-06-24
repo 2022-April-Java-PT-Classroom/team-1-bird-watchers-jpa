@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,27 +7,31 @@
     <title>JAC Enterprises</title>
 </head>
 <body>
-<div class="wrapper">
-    <h1>JAC Enterprises<span class="color">.</span></h1>
-    <nav>
-        <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="developers.html">Developers</a></li>
-            <div class="dropdown"><button class="dropbtn">BirdWatching<i class="fa fa-caret-down"></i></button>
-                <div class="dropdown-content">
-                    <li><a href="birdWatching.html">Intro To BirdWatching</a></li>
-                    <li><a href="#deadlink/noTemplate">BirdWatching In SouthAmerica</a></li>
-                    <li><a href="countryTemplate.html">Countries To Explore</a></li>
-                    <li><a href="regionTemplate.html">Regions In Our Package</a></li>
-                    <li><a href="habitatTemplate.html">Habitats To Experience</a></li>
-                    <li><a href="packagesTemplate">Packages</a></li>
+
+<header>
+    <div class="wrapper">
+        <h1>JAC Enterprises<span class="color">.</span></h1>
+        <nav>
+            <ul>
+                <li><a href="../">Home</a></li>
+                <li><a href="../developers/">Developers</a></li>
+                <div class="dropdown"><button class="dropbtn">BirdWatching<i class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                        <li><a href="../birdwatching/">Intro To BirdWatching</a></li>
+                        <li><a href="#">BirdWatching In SouthAmerica</a></li>
+                        <li><a href="../birds/">The Birds</a></li>
+                        <li><a href="../countries/">Countries To Explore</a></li>
+                        <li><a href="../regions/">Regions In Our Package</a></li>
+                        <li><a href="../habitats/">Habitats To Experience</a></li>
+                        <li><a href="../packages/">Packages</a></li>
+                    </div>
                 </div>
-            </div>
-            <li><a href="#">Book Now</a></li>
-        </ul>
-    </nav>
-</div>
+                <li><a href="../requestInfo">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
+
 <div id="hero-image">
     <div class="wrapper">
         <h2><strong>Developers</strong><br/></h2>
@@ -44,7 +48,8 @@
     <div class="wrapper">
         <ul>
             <li class="feature-1">
-                <img src="../static/images/steph_bio_pic.jpg" width="200" />
+                <img src="../static/images/steph_bio_pic.jpg" width="200"
+                     th:src="@{/images/steph_bio_pic.jpg}"/>
                 <h4>Stephanie</h4>
                 <p>Stephanie Ingraham is a Junior Level Full-Stack Developer
                     born and raised in Huntsville, AL. As a wife and
@@ -54,7 +59,8 @@
                 <a href="#" class="button-1">LinkedIn</a>
             </li>
             <li class="feature-2">
-                <img src="../static/images/sade_bio_pic.jpg" width="200" />
+                <img src="../static/images/sade_bio_pic.jpg" width="200"
+                     th:src="@{/images/sade_bio_pic.jpg}"/>
                 <h4>Andera</h4>
                 <p>Andera Fells is currently located in Columbus, OH. Her love for learning,
                     and taking on challenging task set her on the path of coding. She is a full stack developer
@@ -66,7 +72,8 @@
                 <a href="#" class="button-1">LinkedIn</a>
             </li>
             <li class="feature-3">
-                <img src="../static/images/gail_bio_pic.jpg" width="200" />
+                <img src="../static/images/gail_bio_pic.jpg" width="200"
+                     th:src="@{/images/gail_bio_pic.jpg}"/>
                 <h4>Gail</h4>
                 <p>Gail Cowley is a Cleveland based web-developer. Her love of learning drives her
                     to be on the cutting edge and
@@ -76,7 +83,8 @@
                 <a href="#" class="button-1">LinkedIn</a>
             </li>
             <li class="feature-4">
-                <img src="../static/images/zach_bio_pic.jpg" width="200" />
+                <img src="../static/images/zach_bio_pic.jpg" width="200"
+                     th:src="@{/images/zach_bio_pic.jpg}"/>
                 <h4>Zach</h4>
                 <p>Zachary Martin is a
                     Columbus-based full-stack
@@ -116,7 +124,8 @@
                 <a href="#" class="button-1">LinkedIn</a>
             </li>
             <li class="feature-5">
-                <img src="../static/images/sam_bio_pic.jpg" width="200" />
+                <img src="../static/images/sam_bio_pic.jpg" width="200"
+                     th:src="@{/images/sam_bio_pic.jpg}"/>
                 <h4>Sam</h4>
                 <p>Samuel Leiva is a full-stack Software Developer, currently living in Cincinnati, OH. He has a
                     Bachelor’s degree in Business, and his primary focus is to create solutions for business. He
@@ -126,7 +135,8 @@
                 <a href="#" class="button-1">LinkedIn</a>
             </li>
             <li class="feature-6">
-                <img src="../static/images/roger_bio_pic.jpg" width="200" />
+                <img src="../static/images/roger_bio_pic.jpg" width="200"
+                     th:src="@{/images/roger_bio_pic.jpg}"/>
                 <h4>Roger</h4>
                 <p>Roger Stevens Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis turpis ac libero interdum, id fringilla purus feugiat. Etiam malesuada mattis nibh at bibendum.</p>
                 <a href="#" class="button-1">LinkedIn</a>
@@ -138,19 +148,25 @@
 <footer>
     <div class="wrapper">
         <div id="footer-info">
-            <p>Copyright 2022 JAC Enterprises.</p>
-            <p><a href="#">All rights reserved.</a> </p>
+            <p>WCCI Group Project 1</p>
+            <p><a href="#">All rights reserved</a> I <a href="#">2022</a></p>
         </div>
         <div id="footer-links">
             <ul>
-                <li><h5>JAC Enterprises</h5></li>
-                <li><a href="developers.html">Developers</a></li>
+                <li><h5>Explore</h5></li>
+                <li><a href="../birds/">The Birds</a></li>
+                <li><a href="../countries/">Countries To Explore</a></li>
+                <li><a href="../regions/">Regions In Our Package</a></li>
+                <li><a href="../habitats/">Habitats To Experience</a></li>
+                <li><a href="../packages/">Packages</a></li>
             </ul>
             <ul>
-                <li><h5>Follow Us</h5></li>
+                <li><h5>Social</h5></li>
                 <li><a href="#">Facebook</a></li>
-                         <li><a href="#">TikTok</a></li>
+                <li><a href="#">Instagram</a></li>
+
             </ul>
+
         </div>
         <div class="clear"></div>
     </div>
