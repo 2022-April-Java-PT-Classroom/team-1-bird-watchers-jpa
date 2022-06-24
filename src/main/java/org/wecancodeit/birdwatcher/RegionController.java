@@ -13,7 +13,7 @@ public class RegionController {
     @Resource
     private RegionRepository regionRepo;
 
-    @RequestMapping({"/Region", "/", ""})
+    @RequestMapping({"/Region"})
     public String displayRegions(Model model) {
         model.addAttribute("regions", regionRepo.findAll());
         return "regionTemplate";
