@@ -1,38 +1,49 @@
-body {
-    background-color: #fff;
-    color: #777;
-    font: normal 15px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+html {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgba(184, 176, 144, 0.562);
+   
 }
-p {
-    line-height: 20px;
-    margin-bottom: 20px;
+.header{
+    color: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    background-image: linear-gradient(to left, rgba(120, 125, 155, 0.52), 
+                        rgba(5, 5, 0, 0.801)),url('images/background.jpg');
+ background-size: cover;
+ 
 }
-h1 {
-    font-family: serif;
-    font-weight: bold;
-    color: rgb(110, 108, 108);
-    font-size: 45px;
-    margin-bottom: 20px;
+header{
+color: antiquewhite
 }
-.color{
-    color: #02B8DD;
+.header__nav_list_item{
+margin-right: 15px;
+    display: flex;
+    align-items: right;
+    align-content: flex-end;
+    list-style-type: none;
 }
-h2 {
+header h1 {
+    margin-left: 7rem;
+    font-size:7rem;
+}
+
+/* h2 {
     font-weight: 300;
-    color: rgb(255, 255, 255);
+    color: antiquewhite;
     font-size: 55px;
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 20px;
-}
-h3 {
+} */
+/* h3 {
     font-size: 30px;
-    color: #444;
+   color: antiquewhite;
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 20px;
-}
+} */
 h4 {
     font-size: 24px;
     color: #444;
@@ -46,67 +57,39 @@ h5 {
     font-weight: bold;
     text-transform: uppercase;
 }
-a {
+/* a {
     text-decoration: none;
     color: #444;
-}
-a:hover {
+} */
+/* a:hover {
     color: #02B8DD;
-}
-strong {
+} */
+/* strong {
     font-weight: bold;
-}
-small {
+} */
+/* small {
     font-size: 13px;
     color: #777;
     font-style: italic;
-}
+} */
 .clear {
     clear: both;
 }
 .wrapper {
     margin: 0 auto;
     padding: 0 10px;
-    width: 940px;
+    width: 80%;
 }
-
-header {
-    height: 120px;
-    
-}
-header h1 {
-    float: left;
-    margin-top: 32px;
-}
-header h1 .color {
-    color: #02b8dd; float: right;
-}
-header nav {
-   
-}
-header nav ul li {
-    float: left;
-    display: inline-block;
-    margin-top: 50px;
-}
-header nav ul li a {
-    color: #444;
-    text-transform: uppercase;
-    font-weight: bold;
-    display: block;
-    margin-right: 20px;
-}
-
-#hero-image {
+/* 
+  
+/* #hero-image {
     height: 580px;
     padding-top: 1px;
-
-    background: #e8eced url('https://cdn.pixabay.com/photo/2021/11/30/13/03/condor-6835293_1280.jpg') no-repeat center;
-
+    background: #E8ECED url('https://cdn.pixabay.com/photo/2019/08/16/13/14/condor-4410243_1280.jpg') no-repeat center;
 }
 #hero-image h2 {
     margin: 180px 0 40px 0;
-}
+} */ */
 .button-1 {
     display: block;
     text-align: center;
@@ -124,7 +107,7 @@ header nav ul li a {
     color: #fff;
 }
 #primary-content {
-    background-color: #f8fafa;
+    background-color: #F8FAFA;
     padding: 60px 0;
     text-align: center;
 }
@@ -132,14 +115,13 @@ header nav ul li a {
     display: block;
     margin: 0 auto 20px auto;
     width: 400px;
-    border-bottom: 1px solid #02b8dd;
+    border-bottom: 1px solid #02B8DD;
     padding: 0 0 20px 0;
 }
 #primary-content a img {
     justify-content: center;
-    width: 70%;
+    width: 90%;
 }
-
 #cta {
     padding: 60px 0;
     text-align: center;
@@ -148,7 +130,7 @@ header nav ul li a {
     display: block;
     margin: 0 auto 20px auto;
     width: 400px;
-    border-bottom: 1px solid #02b8dd;
+    border-bottom: 1px solid #02B8DD;
     padding: 0 0 20px 0;
 }
 .button-2 {
@@ -166,32 +148,28 @@ header nav ul li a {
     background-color: #02B8DD;
     color: #fff;
 }
-
 #features ul {
-    margin: 80px 0;
+    padding: 5rem;
+    margin: 20px 0;
     display: flex;
     flex-wrap: wrap;
     width: 1000px;
     justify-content: center;
     align-content: space-around;
-    
 }
 #features ul li {
     width: 300px;
     padding-top: 80px;
-    /* float: left; */
     margin-right: 10px;
     text-align: center;
 }
 #features ul li img {
-    width: 250px;
-    height: 200px;
+    height: auto;
     border-radius: 10px;
 }
-
 footer {
     padding: 60px 0;
-    background-color: #f8fafa;
+    background-color: #F8FAFA;
 }
 #footer-info {
     width: 380px;

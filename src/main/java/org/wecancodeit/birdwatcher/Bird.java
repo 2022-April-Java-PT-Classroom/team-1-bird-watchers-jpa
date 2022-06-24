@@ -55,7 +55,6 @@ public class Bird {
     public Habitat getHabitat() {
         return habitat;
     }
-
     public Bird(String name, String imageUrl, String description, String birdOrder, Country country, Region region, Habitat habitat) {
         this.name=name;
         this.imageUrl=imageUrl;
@@ -66,15 +65,4 @@ public class Bird {
         this.habitat=habitat;
     }
 
-    @Override
-    public String toString() {
-        return "Bird{" +
-                "Name='" + name + '\'' +
-                ", Description='" + description + '\'' +
-                ", Order='" + birdOrder + '\'' +
-                ", Country='" + country + '\'' +
-                ", Region='" + region + '\'' +
-                ", Habitat='" + habitat + '\'' +
-                '}';
-    }
 }

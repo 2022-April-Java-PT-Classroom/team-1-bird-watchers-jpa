@@ -10,6 +10,8 @@ import org.wecancodeit.birdwatcher.BirdRepository;
 import javax.annotation.Resource;
 
 @Controller
+@RequestMapping("/bird")
+
 
 public class BirdController {
     @Resource
@@ -21,10 +23,11 @@ public class BirdController {
     @Resource
     private RegionRepository regionRepo;
 
-    @GetMapping("/bird/{name}")
-    public String displaySingleBird(@PathVariable String name, Model model){
-        Bird retrievedBird = birdRepo.findByName(name);
-        model.addAttribute("Bird", retrievedBird);
+    @GetMapping("/bird/{id}")
+    public String displaySingleBird(@PathVariable Long id, Model model){
+        Bird x = birdRepo.findById(id).get();
+
+        model.addAttribute("Bird", x);
         return "birdTemplate";
     }
 
@@ -32,7 +35,7 @@ public class BirdController {
     public String displayBirdsByHabitat(@PathVariable Long id, Model model) {
        Habitat x = habitRepo.findById(id).get();
 
-        model.addAttribute("Habitat", x.getBirds());
+        model.addAttribute("Habitat",x);
         return "habitatTemplate";
     }
 
@@ -40,7 +43,7 @@ public class BirdController {
     public String displayBirdsByRegion(@PathVariable Long id, Model model) {
         Region x = regionRepo.findById(id).get();
 
-        model.addAttribute("Region", x.getBirds());
+        model.addAttribute("Region",x);
         return "regionTemplate";
     }
 
@@ -48,8 +51,8 @@ public class BirdController {
     public String displayBirdsByCountry(@PathVariable Long id, Model model) {
         Country x = countryRepo.findById(id).get();
 
-        model.addAttribute("Country", x.getBirds());
-        return "CountryTemplate";
+        model.addAttribute("Country", x);
+        return "countryTemplate";
     }
 
 }

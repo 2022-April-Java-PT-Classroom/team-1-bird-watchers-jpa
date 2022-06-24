@@ -1,79 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
-//xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles/bwStyles.css">
     <title>Region</title>
-    <link rel="stylesheet" href="../styles/HabitatStyles.css">
 </head>
+
 <body>
+
     <header>
-        <div class="wrapper">
-        <h1>Region</h1>
-        <nav>
-            <ul>
-                <li>
-                    <a href="src\main\resources\static\home.html">Home</a>
-                </li>
-                <li>
-                    <a href="aboutUs.html">About Us</a>
-                </li>
-                <li>
-                    <a href="#contactUs">Contact us</a>
-                </li>
-                <li>
-                    <a href="#">Scavenger Hunt</a>
-                </li>
-            </ul>
+        <nav class="navbar">
+            <h1>Regions</h1>
+            <a href="/">Home</a>
+            <a href="#aboutUs.html">Developers</a>
+            <div class="dropdown">
+                <button class="dropbtn">BirdWatching</button>
+                <div class="dropdown_content">
+                    <a href="#">IntroToBirdWatching</a>
+                    <a href="#">BirdWatchingInSouthAmerica</a>
+                    <a href="#">CountriesToExplore</a>
+                    <a href="#">RegionsInOurPackage</a>
+                    <a href="#">HabitatsToExperience</a>
+                    <a href="#">Packages</a>
+                </div>
+                <a href="#">ContactUs</a>
+            </div>
         </nav>
     </header>
+
+<h1 th:text="${Region.regionName}">Region</h1>
+
 <article class="mission__habitat_wrapper">
-    <figure class="image__wrapper">
-        <!-- Add Thymeleaf For Chosen Habitat Image -->
-        <img class= "habitat__photo" src="\src\main\resources\static\Images\RegionCoast.jpg" alt="Habitat Photo">
-    </figure>
     <figure class="mission__wrapper">
-    <p class="mission">
-        When choosing a location for your bird watching excursion, region matters! Every region has it's own selection of birds. Please read below to see a description of the region, and the birds that you might see. It's always good to educate yourself before booking a trip.
-    </p>
+        <p class="mission">
+            When choosing a location for your bird watching excursion, region matters! Every region has it's own selection of birds. Please read below to see a description of the region, and the birds that you might see. It's always good to educate yourself before booking a trip.
+        </p>
     </figure>
 </article>
 <section class=about__habitat id="habitat__info">
-<div class="">
-    <h2 class="habitat__info_header">Here Is Some Information About The Region</h2>
-    <!-- Add Thymeleaf For Chosen Habitat Description -->
-    <p class="habitat__description">
-        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
-    </p>
-</div>
+    <div class="">
+        <h2 class="habitat__info_header">Here Is Some Information About The Region</h2>
+        <!-- Add Thymeleaf For Chosen Habitat Description -->
+        <p class="habitat__description" th:text="${Region.description}">
+        </p>
+    </div>
 </section>
 <section class="birds" id="birds__list">
     <h2 class="bird__list_title">Birds You Will Likely See In This Region</h2>
     <h3 class="bird__list_click">Click Link Below To View A Photo And Information About The Bird</h3>
     <!-- Add Thymeleaf to populate list of birds in this habitat -->
-    <ul class="list__of_birds">
-        <li class="bird__list_item">
-            <a href="#">First Bird In List With Link</a>
+    <ul class="list__of_birds" th:each="bird : ${Region.birds}">
+        <li> <a th:href="@{'/bird/' + ${bird.id}}" th:text="${bird.name}" class="bird__list_item"></a>
         </li>
-        <li class="bird__list_item">
-            <a href="#">Second Bird In List With Link</a>
-        </li>
-        <li class="bird__list_item">
-            <a href="#">Third Bird In List With Link</a>
-        </li>
-    
     </ul>
 </section>
 <footer class="footer">
-    <section id="contactUs">
-        <h2 class="contact__us_header">Contact Us</h2>
-        <ul>
-            <li>Email: team1@jacenterprises.com</li>
-            <li>Contact Number: (555)-BIRDING (247-3464)</li>
-        </ul>
-    </section>
-    <small>&copy Team 1 @ WCCI</small>
-</footer>
+    <div class="wrapper">
+        <div id="footer-info">
+            <p>Copyright 2022 JAC Enterprises.</p>
+            <p><a href="#">All rights reserved.</a> </p>
+        </div>
+        <div id="footer-links">
+            <ul>
+                <li><h5>JAC Enterprises</h5></li>
+                <li><a href="developers.html">Developers</a></li>
+            </ul>
+            <ul>
+                <li><h5>Follow Us</h5></li>
+                <li><a href="#">Facebook</a></li>
+                         <li><a href="#">TikTok</a></li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+    </div> Team 1 @ WCCI</small>
 </footer>
 </body>
 </html>
