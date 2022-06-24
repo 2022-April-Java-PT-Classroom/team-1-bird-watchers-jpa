@@ -34,18 +34,18 @@
     </div>
 </header>
 
-    <div class="main">
-    <article th:each="bird: ${bird}">
-        <h1 th:text="${bird.name}">Bird Name</h1>
+<div class="main">
+    <article th:each="region: ${region}">
+        <h1 th:text="${region.regionName}">Region Name</h1>
         <figure class="image__wrapper">
             <!-- Add Thymeleaf For Chosen Habitat Image -->
-            <img class= "habitat__photo" th:src="${bird.imageUrl}" alt="bird Photo">
+            <img class= "region__photo" th:src="${region.imageUrl}" alt="region Photo">
         </figure>
     </article>
-    </div>
-    <div>
-        <li th:each="bird: ${birds}"><a th:href="@{'/bird/' + ${bird.id}}" th:text="${bird.name}">List of Birds</a><li>
-    </div>
+</div>
+<div>
+    <li th:each="region: ${regions}"><a th:href="@{'/region/' + ${region.id}}" th:text="${region.regionName}">List of Birds</a><li>
+</div>
 
 </body>
 </html>

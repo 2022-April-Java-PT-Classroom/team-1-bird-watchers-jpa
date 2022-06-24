@@ -13,15 +13,16 @@ public class RegionController {
     @Resource
     private RegionRepository regionRepo;
 
-    @RequestMapping({"/Region"})
+    @RequestMapping({"/regions"})
     public String displayRegions(Model model) {
         model.addAttribute("regions", regionRepo.findAll());
-        return "regionTemplate";
+        return "regionsTemplate";
     }
 
-    @GetMapping("/regions/{id}")
+    @RequestMapping("/region/{id}")
     public String displaySingleRegion(@PathVariable Long id, Model model) {
-        model.addAttribute("Region", regionRepo.findRegionById(id));
+        Region retrievedRegion = regionRepo.findRegionById(id);
+        model.addAttribute("region", retrievedRegion);
         return "regionTemplate";
     }
 }

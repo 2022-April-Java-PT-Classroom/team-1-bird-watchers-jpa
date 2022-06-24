@@ -34,18 +34,18 @@
     </div>
 </header>
 
-    <div class="main">
-    <article th:each="bird: ${bird}">
-        <h1 th:text="${bird.name}">Bird Name</h1>
+<div class="main">
+    <article th:each="habitat: ${bird}">
+        <h1 th:text="${habitat.name}">Habitat Name</h1>
         <figure class="image__wrapper">
             <!-- Add Thymeleaf For Chosen Habitat Image -->
-            <img class= "habitat__photo" th:src="${bird.imageUrl}" alt="bird Photo">
+            <img class= "habitat__photo" th:src="${habitat.imageUrl}" alt="habitat Photo">
         </figure>
     </article>
-    </div>
-    <div>
-        <li th:each="bird: ${birds}"><a th:href="@{'/bird/' + ${bird.id}}" th:text="${bird.name}">List of Birds</a><li>
-    </div>
+</div>
+<div>
+    <li th:each="habitat: ${habitats}"><a th:href="@{'/habitat/' + ${habitat.id}}" th:text="${habitat.name}">List of Habitats</a><li>
+</div>
 
 </body>
 </html>

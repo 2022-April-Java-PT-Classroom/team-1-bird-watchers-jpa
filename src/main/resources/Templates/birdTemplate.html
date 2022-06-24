@@ -7,25 +7,23 @@
 </head>
 <body>
 <header>
-    <div class="wrapper">
-        <nav>
-            <ul>
-                <li>
-                    <a href="src\main\resources\static\home.html">Home</a>
-                </li>
-                <li>
-                    <a href="aboutUs.html">About Us</a>
-                </li>
-                <li>
-                    <a href="#contactUs">Contact us</a>
-                </li>
-                <li>
-                    <a href="#">Scavenger Hunt</a>
-                </li>
-            </ul>
-        </nav>
-
-    </div>
+    <nav class="navbar">
+        <h1>Regions</h1>
+        <a href="/">Home</a>
+        <a href="#aboutUs.html">Developers</a>
+        <div class="dropdown">
+            <button class="dropbtn">BirdWatching</button>
+            <div class="dropdown_content">
+                <a href="#">IntroToBirdWatching</a>
+                <a href="#">BirdWatchingInSouthAmerica</a>
+                <a href="#">CountriesToExplore</a>
+                <a href="#">RegionsInOurPackage</a>
+                <a href="#">HabitatsToExperience</a>
+                <a href="#">Packages</a>
+            </div>
+            <a href="#">ContactUs</a>
+        </div>
+    </nav>
 </header>
 <article  class="mission__habitat_wrapper">
     <h1 th:text="${bird.name}">Bird Name</h1>

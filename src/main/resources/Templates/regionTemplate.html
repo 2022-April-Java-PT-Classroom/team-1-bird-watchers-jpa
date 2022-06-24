@@ -28,10 +28,9 @@
             </div>
         </nav>
     </header>
-
-<h1 th:text="${regions.regionName}">Region</h1>
-
 <article class="mission__habitat_wrapper">
+    <h1 th:text="${region.regionName}">Region</h1>
+
     <figure class="mission__wrapper">
         <p class="mission">
             When choosing a location for your bird watching excursion, region matters! Every region has it's own selection of birds. Please read below to see a description of the region, and the birds that you might see. It's always good to educate yourself before booking a trip.
@@ -43,7 +42,7 @@
     <div class="">
         <h2 class="habitat__info_header">Here Is Some Information About The Region</h2>
         <!-- Add Thymeleaf For Chosen Habitat Description -->
-        <p class="habitat__description" th:text="${Region.description}">
+        <p class="habitat__description" th:text="${region.description}">
         </p>
     </div>
 </section>
@@ -51,7 +50,7 @@
     <h2 class="bird__list_title">Birds You Will Likely See In This Region</h2>
     <h3 class="bird__list_click">Click Link Below To View A Photo And Information About The Bird</h3>
     <!-- Add Thymeleaf to populate list of birds in this habitat -->
-    <ul class="list__of_birds" th:each="bird : ${Region.birds}">
+    <ul class="list__of_birds" th:each="bird : ${region.birds}">
         <li> <a th:href="@{'/bird/' + ${bird.id}}" th:text="${bird.name}" class="bird__list_item"></a>
         </li>
     </ul>

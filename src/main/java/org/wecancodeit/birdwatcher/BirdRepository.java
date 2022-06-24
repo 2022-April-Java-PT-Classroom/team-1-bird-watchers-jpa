@@ -3,6 +3,7 @@ package org.wecancodeit.birdwatcher;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Collection;
 import java.util.List;
 
 
@@ -11,6 +12,13 @@ public interface BirdRepository extends CrudRepository <Bird, Long> {
     List<Bird> findBirdsByCountry(Country country);
     List<Bird> findBirdByRegion(Region region);
     List<Bird> findBirdByHabitat(Habitat habitat);
+
+//    List<Bird> findAll (){
+//        return
+//    }
+
+
+
 
 
 }
