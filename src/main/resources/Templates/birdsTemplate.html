@@ -43,6 +43,9 @@
         </figure>
     </article>
     </div>
+    <div>
+        <li th:each="bird: ${birds}"><a th:href="@{'/bird/' + ${bird.id}}" th:text="${bird.name}">List of Birds</a><li>
+    </div>
 
 </body>
 </html>
