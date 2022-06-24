@@ -25,31 +25,31 @@ public class HomeController {
 
     }
 
-    @RequestMapping("/country")
+    @RequestMapping("/countryTemplate")
     public String displayCountryPage(Model model){
         model.addAttribute("Packages", packagesRepository.findAll());
-        return "country";
+        return "countryTemplate";
 
     }
 
-    @RequestMapping("/region")
+    @RequestMapping("/regionTemplate")
     public String displayRegionPage(Model model){
         model.addAttribute("Packages", packagesRepository.findAll());
-        return "region";
+        return "regionTemplate";
 
     }
 
-    @RequestMapping("/habitat")
+    @RequestMapping("/habitatTemplate")
     public String displayHabitatPage(Model model){
         model.addAttribute("Packages", packagesRepository.findAll());
-        return "habitat";
+        return "habitatTemplate";
 
     }
 
-    @RequestMapping("/requestinfo")
+    @RequestMapping("/requestInfo")
     public String displayRequestInfoPage(Model model){
         model.addAttribute("Packages", packagesRepository.findAll());
-        return "requestinfo";
+        return "requestInfo";
 
     }
 }
